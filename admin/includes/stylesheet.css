@@ -1,0 +1,951 @@
+/* --------------------------------------------------------------
+   $Id: stylesheet.css 1127 2007-02-10 12:18:57 VaM $   
+
+   VaM Shop - open source ecommerce solution
+   http://vamshop.ru
+   http://vamshop.com
+
+   Copyright (c) 2007 VaM Shop
+   --------------------------------------------------------------
+   based on: 
+   (c) 2000-2001 The Exchange Project  (earlier name of osCommerce)
+   (c) 2002-2003 osCommerce(stylesheet.css,v 1.24 2003/06/02); www.oscommerce.com 
+   (c) 2003	 nextcommerce (stylesheet.css,v 1.12 2003/08/23); www.nextcommerce.org
+   (c) 2004	 xt:Commerce (stylesheet.css,v 1.12 2003/08/23,v 1.17 2003/08/24); xt-commerce.com
+
+   Released under the GNU General Public License 
+   --------------------------------------------------------------*/
+
+/* links */
+a:link { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: normal; text-decoration: none; }
+a:visited { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: normal; text-decoration: none; }
+a:active { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: normal; text-decoration: none; }
+a:hover { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: normal; text-decoration: underline; }
+
+a.headerLink:link { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: bold; text-decoration: none; }
+a.headerLink:visited { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: bold; text-decoration: none; }
+a.headerLink:active { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: bold; text-decoration: none; }
+a.headerLink:hover { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: bold; text-decoration: underline; }
+
+a.menuBoxHeadingLink:link { font-size: 11pt; color: #000000; font-weight: bold; text-decoration: none; }
+a.menuBoxHeadingLink:visited { font-size: 11pt; color: #000000; font-weight: bold; text-decoration: none; }
+a.menuBoxHeadingLink:active { font-size: 11pt; color: #000000; font-weight: bold; text-decoration: none; }
+a.menuBoxHeadingLink:hover { font-size: 11pt; color: #000000; font-weight: bold; text-decoration: none; }
+
+a.menuBoxContentLink:link { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: normal; text-decoration: none; }
+a.menuBoxContentLink:visited { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: normal; text-decoration: none; }
+a.menuBoxContentLink:active { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; font-weight: normal; text-decoration: none; }
+a.menuBoxContentLink:hover { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #cccccc; font-weight: normal; text-decoration: none; }
+
+a.splitPageLink:link { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #0000FF; font-weight: normal; text-decoration: none; }
+a.splitPageLink:visited { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #0000FF; font-weight: normal; text-decoration: none; }
+a.splitPageLink:active { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #0000FF; font-weight: normal; text-decoration: none; }
+a.splitPageLink:hover { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #0000FF; font-weight: normal; text-decoration: underline; background-color: #FFFF33; }
+
+/* menu box */
+.menuBoxHeading { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #000000; background-color: #f1f1f1; }
+.menuBoxContent { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #616060; }
+.longDescription { visibility: hidden; display: none; }
+
+/* page */
+html,body
+   {
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+		background-image: url(../images/bg.png);
+		background-position: 0 -221px;
+		background-repeat: repeat-x; 
+   }
+
+ color: #000000; margin: 0px; }
+.headerBar {
+    background-color: #cccccc; 
+    border-color: #000000; 
+    border-bottom: 1px solid;  
+ }
+.headerBarContent { 
+font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+font-size: 11pt; 
+color: #000000; 
+font-weight: bold; 
+padding: 2px;
+
+}
+.columnLeft { background-color: #F0F1F1; border-color: #999999; border-width: 1px; border-style: solid; padding: 2px; }
+
+.columnLeft2 { 
+vertical-align: top; 
+font-color: #000000;
+ }
+
+ .boxCenter {
+ border: 0px solid;
+ border-color: #cccccc;
+ background: transparent;
+ }
+
+.pageHeading { 
+
+		font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+		color: #ff7b08;
+		font-weight: bold;
+		font-size: 12pt;
+		padding: 0;
+		margin: 0;
+  
+ }
+ 
+/* data table */
+
+table.contentListingTable
+	{
+		width: 100%;
+		background: #fff;
+		padding: 1px;
+		margin: 0 0 .2em 0;
+		border: 1px solid #97a5b0;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-moz-border-radius-topleft: 4px;
+		-webkit-border-top-left-radius: 4px;
+		-moz-border-radius-topright: 4px;
+		-webkit-border-top-right-radius: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		-moz-border-radius-bottomright: 4px;
+		-webkit-border-bottom-right-radius: 4px;
+		
+	}
+
+table.pageHead
+	{
+		margin: 0 0 .3em 0;
+	}
+	
+.dataTableHeadingRow {
+}
+
+
+.dataTableHeadingContent {
+
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+    
+		color: #000;
+		font-weight: normal;
+		padding: .6em;
+		margin: 0;
+		background-color: #e3eff7;
+		background-image: url(../images/bg.png);
+		background-position: 0 0;
+		background-repeat: repeat-x; 
+		border: 1px solid #97a5b0;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-moz-border-radius-topleft: 4px;
+		-webkit-border-top-left-radius: 4px;
+		-moz-border-radius-topright: 4px;
+		-webkit-border-top-right-radius: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		-moz-border-radius-bottomright: 4px;
+		-webkit-border-bottom-right-radius: 4px;    
+}
+
+.dataTableRowSelected {
+ background: #ffc;
+ font-weight: bold;
+
+ }
+.dataTableRowOver {
+ background-color: #ffc; 
+
+ }
+ 
+.dataTableContent {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000;
+ vertical-align: middle;
+ border-bottom: 0px dashed #cccccc;
+ }
+
+.dataTableContent-odd {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000;
+ vertical-align: middle;
+ border-bottom: 0px dashed #cccccc;
+ background: #fff;
+ }
+
+.dataTableContent-even {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000;
+ vertical-align: middle;
+ border-bottom: 0px dashed #cccccc;
+ background: #f7f7f7;
+ }
+
+.dataTableContentRss {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000;
+ vertical-align: middle;
+ }
+ 
+td.categories_view_data {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000;
+ vertical-align: middle;
+ border-bottom: 0px dashed #cccccc;
+ text-align: left;
+}
+
+td.categories_view_data_even {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000;
+ vertical-align: middle;
+ padding: .1em;
+ text-align: center;
+}
+
+td.categories_view_data_odd {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000;
+ vertical-align: middle;
+ padding: .1em;
+ text-align: center;
+}
+
+td.view_data_even {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000;
+ vertical-align: middle;
+ background: #f7f7f7;
+ padding: .1em;
+ text-align: left;
+}
+
+td.view_data_odd {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000;
+ vertical-align: middle;
+ background: transparent;
+ padding: .1em;
+ text-align: left;
+}
+
+.dataTableContent_products {
+ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+ font-size: 11pt; 
+ color: #000000; 
+ vertical-align: middle;
+ background-color: #FFF2F2;
+ } 
+ 
+
+ 
+.dataTableContentRow {
+font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+font-size: 11pt; 
+color: #000000; 
+vertical-align: middle;
+border-bottom: 1px solid;
+border-color: #cccccc;
+}
+
+/* info box */
+.infoBoxHeading {
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+    font-size: 11pt;
+    font-weight: bold;
+}
+.infoBoxContent { 
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-size: 11pt;
+}
+
+.headTable {
+		color: #ff7b08;
+		font-weight: bold;
+		font-size: 11pt;
+		margin: 0 auto;
+		padding: 7px 0 7px 10px;
+		background-color: #f4f4f4;
+		background-image: url(../images/bg.png);
+		background-position: 0 -135px;
+		background-repeat: repeat-x; 
+		border-top: 1px solid #c0c1c2;
+		border-left: 1px solid #c0c1c2;
+		border-right: 1px solid #c0c1c2;
+		border-bottom: 1px solid #c0c1c2;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		-moz-border-radius-topleft: 8px;
+		-webkit-border-top-left-radius: 8px;
+		-moz-border-radius-topright: 8px;
+		-webkit-border-top-right-radius: 8px;
+		vertical-align: middle;
+}
+
+.contentTable {
+ 	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+ 	font-size: 11pt;
+		margin: 0 auto;
+		padding: .5em;
+		background-color: #fff;
+		background-image: url(../images/bg.png);
+		background-position: 0 -602px;
+		background-repeat: repeat-x; 
+		border-top: 0px;
+		border-left: 1px solid #c0c1c2;
+		border-right: 1px solid #c0c1c2;
+		border-bottom: 1px solid #c0c1c2;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+		-moz-border-radius-bottomleft: 8px;
+		-webkit-border-bottom-left-radius: 8px;
+		-moz-border-radius-bottomright: 8px;
+		-webkit-border-bottom-right-radius: 8px;
+}
+
+/*  
+ *  Admin Buttons 
+ */
+
+a.button, span.button, del.button{
+	
+	display:-moz-inline-box;
+	display:inline-block;
+	cursor:pointer;
+	border:none;
+    font-size:0;
+    line-height:0;
+    
+	/*
+	for Safari, read this first
+	http://creativebits.org/webdev/safari_background_repeat_bug_fix
+	*/
+	background-position:0 0;
+	background-repeat:no-repeat;
+	height:30px;
+	text-decoration:none;
+	color:#2e523b;
+	font-style:normal;
+	margin:0 6px 0px 0;
+	padding:0 10px 0 0;	
+	vertical-align:middle;	
+	
+    padding-top:-2px;
+	_position:relative;
+	_width:10px;	
+	_overflow-y:hidden;
+}
+
+
+
+a.button, span.button, del.button,
+a.button span, span.button button, span.button input, del.button span{
+    background-image:url(../images/buttons/form_buttons.png);
+    _background-image:url(../images/buttons/form_buttons.gif);
+}
+
+
+a.button span, span.button button, span.button input, del.button span{
+	
+	white-space:nowrap;
+	cursor:pointer;
+    color:#222;
+	display:-moz-inline-box;
+	display:inline-block;
+	line-height:1;
+    letter-spacing:0 !important;
+    font-family:"Arial" !important;
+    font-size:13px !important;
+    font-style:normal;    
+    background-color:transparent;
+	background-position:100% 0;
+	background-repeat:no-repeat;
+	height:30px;
+	padding:8px 20px 0 10px;
+	margin:0 -16px 0 10px;
+	border:none;
+	vertical-align:text-top;
+	zoom:1;
+	_position:relative;
+    _padding-left:0px;
+	_padding-right:12px;
+	_margin-right:-10px;	
+	_display:block;
+	_top:0;
+	_right:-5px;
+	
+}
+
+
+span.button button{
+   line-height:2.5;/*Opera need this*/
+}
+
+html.safari a.button span, 
+html.safari del.button span{
+  line-height:1.3;
+}
+
+html.safari span.button button{
+  line-height:2.6;
+}
+
+html.safari a.button:focus,
+html.safari span.button button:focus{
+    outline:none;
+}
+
+
+
+del.button{
+	/* cursor:not-allowed;	*/
+	background-position:0 -120px;
+	
+}
+
+del.button span{
+	cursor:default;
+    color:#aaa !important;
+	background-position:100% -120px;
+}
+
+
+span.button button, span.button input{
+	padding-top:0px;
+	line-height:2.5;/*Opera need this*/
+}
+
+
+/** optional **/
+/*
+a.button:visited{
+	color:#aaa;
+}
+*/
+
+
+/*Hover Style*/
+
+a.button:hover, 
+span.button:hover,
+a.button:focus, 
+
+a.dom-button-focus, 
+span.button-behavior-hover{
+	background-position:0 -60px;
+	color:#222;
+	text-decoration:none;
+}
+
+
+
+
+
+a.button:hover span, 
+span.button:hover button, 
+a.button:focus span, 
+
+span.button-behavior-hover button, 
+span.button-behavior-hover input{
+	background-position:100% -60px;
+}
+
+
+a.button:active, a.button:focus span{
+	color:#444;
+}
+
+
+
+
+del.button-behavior-hover, del.button:hover{
+	background-position:0 -180px;
+	/* cursor:not-allowed; */
+}
+
+
+del.button-behavior-hover span, del.button:hover span{
+	background-position:100% -180px;
+	/* cursor:not-allowed; */
+	
+}
+
+
+/* Admin Buttons EOF */
+
+div.stock_warn {
+	background-color: #F9F0F1;
+}
+
+/* message box */
+
+.messageBox { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; }
+.messageStackError, .messageStackWarning { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; background-color: #ffb3b5; }
+.messageStackSuccess { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; background-color: #99ff00; }
+
+/* forms */
+CHECKBOX, input[type=text], RADIO, SELECT, TEXTAREA, FILE { 
+font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-size: 1em;
+	border: 1px solid;
+	border-color: #666 #ccc #ccc #666;
+	padding: 2px;
+   margin-top: 0.2em;
+   margin-bottom: 0.4em;
+   border-top-left-radius: 4px;
+   border-top-right-radius: 4px;
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+   -moz-border-radius-topleft: 4px;
+   -webkit-border-top-left-radius: 4px;
+   -moz-border-radius-topright: 4px;
+   -webkit-border-top-right-radius: 4px;
+   -moz-border-radius-bottomleft: 4px;
+   -webkit-border-bottom-left-radius: 4px;
+   -moz-border-radius-bottomright: 4px;
+   -webkit-border-bottom-right-radius: 4px;
+}
+FORM { display: inline; }
+
+input:focus, .sffocus, .sffocus {
+	background-color: #ffc;
+}
+
+/* account */
+.formArea { background-color: #f1f1f1; border-color: #cccccc; border-style: solid; border-width: 1px; }
+.formAreaTitle { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; font-weight: bold; }
+
+/* attributes */
+.attributes-odd { background-color: #f4f7fd; }
+.attributes-even { background-color: #ffffff; }
+
+/* miscellaneous */
+.specialPrice { color: #ff0000; }
+.oldPrice { text-decoration: line-through; }
+.fieldRequired { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #ff0000; }
+.smallText { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; }
+.main { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; text-align: left; }
+.errorText { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 11pt; color: #ff0000; }
+
+/* Сборка VaM */
+
+div.buttonadmin {
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #67748B;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+TD.buttonadmin {
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #67748B;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+TR.buttonadmin {
+  background-color: #67748B;
+  color: #FFFFFF;
+}
+
+A.shippingInfo { 
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #67748B;
+  color: #FFFFFF;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+A.shippingInfo:hover {
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #67748B;
+  color: #FFFFFF;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+A.shippingInfo:visited {
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #67748B;
+  color: #FFFFFF;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+TD.button1 {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+TD.navigation {
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #990000;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+TD.navigationTop {
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #000000;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+TD.contentBoxHeading1, p.contentBoxHeading1 {
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #990000;
+}
+
+A.contentBoxHeading1 {
+  color: #0000FF;
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #990000;
+  text-decoration: none;
+}
+
+a:hover.contentBoxHeading1 {
+  color: #0000FF;
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #990000;
+  text-decoration: none;
+}
+
+TD.line {
+  background-color: #990000;
+  color: #990000;
+}
+
+TR.headerNavigation {
+  background: #F6F6F6;
+}
+
+TD.headerNavigation {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-size: 11pt;
+	color: #000000;
+	font-weight : bold;
+	border-bottom: 1px solid;
+	border-color: #b6b7cb;
+	background-color: #F6F6F6;
+}
+
+A.headerNavigation { 
+  color: #ffffff; 
+}
+
+A.headerNavigation:hover {
+  color: #ffffff;
+}
+
+h1.contentBoxHeading {
+		font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+		color: #ff7b08;
+		font-weight: bold;
+		font-size: 12pt;
+		padding: 0;
+		margin: 5px;
+		}
+		
+h1.contentBoxHeading a, h1.contentBoxHeading a:hover, h1.contentBoxHeading a:visited {
+		font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+		color: #ff7b08;
+		font-weight: bold;
+		font-size: 12pt;
+		text-decoration: none;
+		padding: 0;
+		margin: 0;
+}
+
+h3 {
+display: none;
+}
+
+/* Подсказки */
+
+.help
+   {
+	  position: absolute;
+	  z-index: 10;
+	  overflow: hidden;
+	  width: 18em;
+   }
+   
+.help iframe
+   {
+	  display: none;
+	  display/**/: block;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: -1;
+	  filter: mask();
+	  width: 3000px;
+	  height: 3000px;
+   }
+
+a.info span
+   {
+     display: none;
+   }
+
+a.info
+   {
+     position: relative;
+     z-index: 24;
+   }
+   
+a.info:hover 
+   {
+     background-color: #fff; 
+     text-decoration: none;
+     z-index: 25;
+   }
+
+a.info:hover span 
+   {
+     display: block; 
+     background: white; 
+     border: #000 1px solid; 
+     color: black;
+     position: absolute;
+     width: 200px;
+     padding: 3px;
+     font-size: 11px;
+   }
+
+/* /Подсказки */
+
+/* Навигационное меню */
+
+
+/* ================================================================ 
+This copyright notice must be kept untouched in the stylesheet at 
+all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/multi-column.html
+Copyright (c) 2005-2009 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+
+#nav {margin: 0; width: 100%; height: 41px; background:#fff url(../images/menu/bg.gif) repeat-x left top;}
+
+#menu {height:41px;position:relative;font-size:13px; margin: 0; z-index:1000; padding-right:0;width:100%;}
+#menu table.ie6 {border-collapse:collapse; margin:0; padding:0;}
+
+#menu ul {padding:0; margin:0; list-style: none;}
+#menu ul li {float:left;}
+#menu ul li a {display:block; float:left;padding:0 15px 0 0;text-decoration:none; color:#fff; font-weight:bold; height:41px;line-height:40px;font-size:13px; background:url(../images/menu/tabCenter.gif) no-repeat right top;}
+#menu ul li a b {display:block; float:left;padding:0 0 0 15px; text-decoration:none; color:#fff; font-weight:bold; height:41px;line-height:40px;font-size:13px;background:url(../images/menu/tabCenter.gif) no-repeat left top; cursor:pointer;}
+
+#menu ul li div.holder {position:absolute; left:-9999px;}
+
+#menu ul li div .leftSide {float:left;background: #ddd url(../images/menu/dropLeft.gif) no-repeat left bottom;}
+#menu ul li div .rightSide {float:left; margin-left:10px; display:inline; padding:0 10px 0 0; background: #aaa url(../images/menu/dropRight.gif) no-repeat right bottom;}
+
+#menu ul li:hover {position:relative;}
+#menu ul li a:hover {color:#910; background-position:right center; white-space:nowrap; position:relative;}
+#menu ul li a:hover b {color:#910; background-position:left center;}
+#menu ul li a.sub:hover {color:#910; background-position:right bottom; white-space:nowrap; position:relative;}
+#menu ul li a.sub:hover b {color:#910; background-position:left bottom;}
+
+#menu ul li:hover > a {color:#910; position:relative;}
+#menu ul li:hover a.sub {color:#910; background-position:right bottom; white-space:nowrap; position:relative;}
+#menu ul li:hover a.sub > b {color:#910; background-position:left bottom;}
+
+#menu ul :hover div.holder {position:absolute; top:41px; left:4px; margin: 0; padding: 0;}
+
+#menu ul li.right a:hover div.holder {left:auto; right:3px; top:41px;}
+#menu ul li.right:hover div.holder {left:auto; right:4px; top:41px;}
+
+#menu ul dl {width:auto; margin:5px 0 10px 0; padding:0 5px;list-style:none;}
+#menu ul dl dt {padding:0 10px; margin:0; line-height:20px; background:#488; color:#fff; white-space:nowrap;}
+#menu ul dl dd {display:block; padding:0; margin:0;}
+#menu ul dd a {background-image: none; display:block; height: 20px; line-height: 20px; color:#421; text-align:left; margin: 0; padding:0 10px;font-weight:normal; white-space:nowrap; float:none;}
+#menu ul dd a:hover {color:#c60;}
+
+#menu ul table td {vertical-align:top;}
+
+/* /Навигационное меню */
+
+div.clear
+   {
+  	  clear: both;
+   }
+
+div#tabs
+   {
+  	  margin-top: .5em;
+   }
+   
+div#map
+	{
+		font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+		font-size: 11pt; 
+		color: #000000; 
+		font-weight: normal; 
+		text-decoration: none;
+	}   
+
+div#map #error
+	{
+		border: 1px solid #ff0000;
+		padding: .5em;
+		margin: 0 0 .5em 0;
+		background: #fcc;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-moz-border-radius-topleft: 4px;
+		-webkit-border-top-left-radius: 4px;
+		-moz-border-radius-topright: 4px;
+		-webkit-border-top-right-radius: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		-moz-border-radius-bottomright: 4px;
+		-webkit-border-bottom-right-radius: 4px;
+	}   
+	
+#tooltip {
+width: 200px;
+position: absolute;
+z-index: 1001;
+		font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+		font-size: 10pt; 
+border: 1px solid #1593db;
+background-color: #e5f5fe;
+color: #000;
+padding: 5px;
+opacity: 0.95;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+
+td.header {
+
+		background-color: transparent;
+		background-image: url(../images/bg.png);
+		background-position: 0 0;
+		background-repeat: repeat-x; 
+		height: 100px;
+}
+
+/* Редактор заказов */
+
+.dataRowSelected {
+ background: #ffc;
+ }
+
+/* /Редактор заказов */
+
+/* Start Products Specifications */
+
+TR.productListing-odd {
+  background: #f8f8f9;
+}
+
+TR.productListing-even {
+  background: #f8f8f9;
+}
+
+TABLE.productListing {
+  border: 1px;
+  border-style: solid;
+  border-color: #b6b7cb;
+  border-spacing: 1px;
+}
+
+.productListing-heading {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  background: #b6b7cb;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+TD.productListing-data {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+}
+
+.specification_box {
+  margin-top: 10px;
+}
+
+.specification_box li {
+  line-height: 1.5;
+}
+
+.description {
+  font-family: Verdana, Arial, sans-serif; 
+  font-size: 8pt;
+  max-width: 125px;
+}
+
+iul.specification_box {
+  line-height: 1.5;
+}
+
+mg.image_filter {
+  width: 20px;  /* Width of each image */
+  height: 20px;  /* Height of each image */
+  padding: 5px;  /* Padding between the category contents and the border */
+  border: 1px solid #182d5c;  /* Border around each image */
+  margin: 3px;  /* Margin between the image border and other objects */
+  background: #ffffff;  /* Background color behind each image */
+  float: left;  /* Don't change this */
+}
+
+.image_box { /* Used in Admin -> Categories only to display images with checkboxes */
+  width: 40px;  /* Width of each Image Box */
+  height: 60px;  /* Height of each Image Box */
+  padding: 5px;  /* Padding between the Image Box contents and the border */
+  border: 1px solid #182d5c;  /* Border around each Image Box */
+  margin: 3px;  /* Margin between the Image Box border and other objects */
+  background: #eeeeee;  /* Background color behind each Image Box */
+  float: left;  /* Don't change this */
+}
+/* End Products Specifications */

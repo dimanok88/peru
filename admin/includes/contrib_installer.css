@@ -1,0 +1,9 @@
+/* message box */
+.messageBox {font-family: Arial, sans-serif;font-size: 12px;}
+.messageError {font-family: Arial, sans-serif;font-size: 12px;background-color: #FF813D;border-bottom: 1px solid white;}
+.messageWarning {font-family: Arial, sans-serif;font-size: 12px;background-color: #E9E93D;border-bottom: 1px solid white;}
+.messageNotice {font-family: Arial, sans-serif;font-size: 12px;background-color: #98c0e9;border-bottom: 1px solid white;}
+.messageSuccess {font-family: Arial, sans-serif;font-size: 12px;background-color: #91E951;border-bottom: 1px solid white;}
+/* data table --------------------------------------------------------------------------------------*/
+/* tabke content-------------------------------------------------------------------------------------*/
+td.dataTableContentCIP {font-family:Arial,sans-serif;font-size:14px; color:#0000; font-weight:bold;text-decoration:none;}
