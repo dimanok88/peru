@@ -1,0 +1,108 @@
+/*--------------------------
+#
+# created by MNP
+# url: www.mynetplatform.com
+# icq: 224454617
+# skype: ciuvir
+#
+------------------------  */
+
+html, body, div, span, p, img, fieldset, form, label {margin:0; padding:0; border:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit}
+
+body {background: #FCE5C3 url(../images/bg.jpg) repeat-y center 0; min-width: 1002px; color:#674a3b}
+body, input {font:12px/14px Verdana, 'Geneva CY', 'DejaVu Sans', sans-serif}
+
+input.txt {color: #d1c7b1; padding: 0 11px; width: 162px; border: 0; font-size: 20px; height: 31px; line-height: 31px; background: url(../images/input.png) no-repeat 0 0}
+input.submit {cursor: pointer; border: 0; width: 172px; height: 32px; font-size: 14px; line-height: 32px; background: url(../images/submit.png) no-repeat 0 0; overflow: visible; color: #f5e8c1}
+
+a, input:focus {outline: none}
+a {color: #644832; text-decoration: none}
+a:hover {text-decoration: underline}
+
+.fll {float: left; display: inline}
+.flr {float: right; display: inline}
+.row {overflow: hidden}
+.t_center {text-align: center}
+.t_right {text-align: right}
+
+.chest {position: absolute; right: -21px; bottom: -27px; width: 83px; height: 73px; background: url(../images/chest.png) no-repeat 0 0}
+.flower_l {position: absolute; left: -88px; bottom: -50px; width: 70px; height: 76px; background: url(../images/flower_l.png) no-repeat 0 0; z-index: 100}
+.flower_r {position: absolute; right: -49px; bottom: -46px; width: 75px; height: 78px; background: url(../images/flower_r.png) no-repeat 0 0; z-index: 100}
+.ornament {position: absolute; top: 0; width: 29px; height: 96%; background: url(../images/ornament.png) repeat-y 0 bottom}
+.ornament1 {position: absolute; top: -30px; width: 100%; height: 57px; background: url(../images/ornament1.png) no-repeat center 0}
+.ornament.left {left: 55px}
+.ornament.right {right: 58px}
+
+/* structure
+----------------------------------------------------------------------------------------*/
+.header .in {width: 1002px; margin: 0 auto}
+.side_l {float: left; left: 50%; position: relative; width: 1147px}
+.side_r {float: left; left: -50%; position: relative; width: 1147px}
+
+.wrapper {width: 100%; margin: 0 auto; position: relative; overflow: hidden}
+.container {width: 100%; position: relative; overflow: hidden; background: url(../images/bg-left.png) repeat-y 69px 0; padding: 0 0 50px}
+.container .in {float: left; overflow: hidden; margin: 0 0 0 71px; width: 1002px}
+
+/* header
+----------------------------------------------------------------------------------------*/
+.header {background: url(../images/bg-h.jpg) no-repeat center 0; height: 349px; position: relative}
+.header a.home {display: block; width: 34px; height: 34px; background: url(../images/home.png) no-repeat 0 0; margin: 24px 18px 0 0; text-indent: -9999px}
+.header .logo {margin: 72px 0 0 99px; width: 276px; text-indent: -9999px}
+.header .logo a {display: block; width: 276px; height: 65px; background: url(../images/logo.jpg) no-repeat 0 0; margin: 0 0 5px}
+.header .logo p {float: right; display: inline; width: 269px; height: 20px; background: url(../images/slogan.jpg) no-repeat 0 0}
+.header .mini_cart {position: absolute; bottom: 37px; right: 135px; width: 268px; height: 98px; background: url(../images/cart.png) no-repeat 0 0}
+.header .mini_cart .in {position: relative; padding: 10px 0 0 40px; color: #321805; width: auto}
+.header .mini_cart .in .title {font-size: 14px; padding: 2px 0 18px}
+.header .mini_cart .in p {padding: 0 0 6px 22px}
+
+.header .menu {position: absolute; left: 115px; bottom: 12px; width: 958px; height: 25px}
+.header .menu .inner {position: relative}
+.header .menu ul {list-style: none; overflow: hidden}
+.header .menu ul, .header .menu ul li {margin: 0; padding: 0}
+.header .menu ul li {margin: 0 0 0 -2px; padding: 0 25px; font-size: 14px; line-height: 23px; background: url(../images/li.gif) no-repeat 0 0; float: left; display: inline}
+.header .menu ul li a {color: #fff}
+
+/* content
+----------------------------------------------------------------------------------------*/
+.content {margin: 0 0 0 224px}
+.content .breadcrumbs {background: url(../images/breadcrumbs.png) no-repeat 0 0; height: 34px; line-height: 32px; padding: 0 0 0 3px; color: #643600}
+.content .breadcrumbs a {color: #643600; text-decoration: none; background: #c9a63f; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px}
+.content .breadcrumbs a {padding: 2px 7px; margin: 0 8px 0 9px}
+.content .breadcrumbs span {text-decoration: underline; margin: 0 8px 0 9px}
+.content .title {padding: 21px 0 19px 41px; color: #593c2d; font-size: 16px; line-height: 16px}
+.content .catalog {padding: 0 0 10px 13px}
+.content .catalog .item {width: 163px; height: 245px; margin: 0 12px 30px; float: left; display: inline; background: url(../images/item.png) no-repeat 0 0; text-align: center}
+.content .catalog .item .mid {height: 171px; padding: 25px 0 0; position: relative}
+.content .catalog .item .mid a span {position: absolute; top: 170px; left: 0; width: 100%; color: #754d4a; line-height: 12px}
+.content .catalog .item .mid a:hover span {text-decoration: underline}
+.content .catalog .item .bot {height: 48px}
+.content .catalog .item .bot .price {font-size: 14px; font-weight: bold; line-height: 20px; color: #fff; text-shadow: 0 0 1px #2b0e03}
+.content .catalog .item .bot .in_cart {padding: 7px 0 0; font-size: 10px}
+.content .catalog .item .bot .in_cart a {color: #f6e5ca; padding: 0 0 0 21px; position: relative}
+.content .catalog .item .bot .in_cart a:hover {text-decoration: none}
+.content .catalog .item .bot .in_cart a span {border-bottom: 1px dashed #fff}
+.content .catalog .item .bot .in_cart a:hover span {border: 0}
+.content .catalog .item .bot .in_cart a b {position: absolute; left: 0; top: 1px; width: 14px; height: 15px; background: url(../images/plus.png) no-repeat 0 0; font-size: 0; line-height: 0}
+.content .text_place {padding: 0 45px 0 25px; color: #674a3b}
+.content .text_place p {padding: 3px 0 13px}
+
+/* left
+----------------------------------------------------------------------------------------*/
+.left-block {float: left; margin-left: -1002px; width: 224px; padding: 5px 0 0}
+.left-block .title {width: 184px; height: 40px; margin: 0 0 0 2px; background: url(../images/bg-title.jpg) no-repeat 0 0; color: #7e5612; text-shadow: 0 0 5px #fff; font-size: 14px; line-height: 42px; padding: 0 0 0 30px}
+.left-block .block {padding: 6px 11px 19px 27px}
+.left-block ul, .left-block ul li {margin: 0; padding: 0}
+.left-block ul {list-style: none; margin: -5px 0 0; padding: 0 0 23px}
+.left-block ul li {border-bottom: 1px dashed #d3c092; padding: 7px 0 8px 23px}
+.left-block .src {padding: 8px 11px 19px 27px}
+.left-block .src div {position: relative}
+.left-block .src div .txt {width: 128px; padding: 0 45px 0 11px}
+.left-block .src div .submit {position: absolute; right: 0; top: -1px; width: 42px; height: 32px; background: url(../images/src.png) no-repeat 0 0; border: 0}
+.left-block .enter p {padding: 2px 0 1px}
+.left-block .enter .t_right {font-size: 10px; padding: 0 7px 1px 0}
+.left-block .enter .t_right a {color: #7e5612; text-shadow: 0 0 3px #efbf65}
+
+/* footer
+----------------------------------------------------------------------------------------*/
+.footer {height: 149px; background: url(../images/bg-f.png) no-repeat center 0; position: relative}
+.footer .text {width: 335px; padding: 15px 0 0; color: #fff; margin: 0 auto; text-align: center}
