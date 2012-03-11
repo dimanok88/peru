@@ -307,10 +307,10 @@ require(DIR_WS_INCLUDES.'google_conversiontracking.js.php');
     }
   }
 
-    if ((!file_exists(dirname($_SERVER['SCRIPT_FILENAME']) . '/vamshop.key')) && (!file_exists(dirname($_SERVER['SCRIPT_FILENAME']) . '/vamshop.key.txt'))) {
+    /*if ((!file_exists(dirname($_SERVER['SCRIPT_FILENAME']) . '/vamshop.key')) && (!file_exists(dirname($_SERVER['SCRIPT_FILENAME']) . '/vamshop.key.txt'))) {
 
       vam_output_warning(WARNING_VAMSHOP_KEY);
-    }
+    }*/
   
   // check if the session folder is writeable
   if (WARN_SESSION_DIRECTORY_NOT_WRITEABLE == 'true') {
