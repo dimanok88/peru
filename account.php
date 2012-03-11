@@ -16,7 +16,6 @@
 
    Released under the GNU General Public License
    ---------------------------------------------------------------------------------------*/
-
 include ('includes/application_top.php');
 
 // create template elements
