@@ -1,0 +1,39 @@
+{config_load file="$language/lang_$language.conf" section="boxes"}
+<!-- Бокс быстрый заказ -->
+<div id="boxAddQuickie">
+<h5>{#heading_add_a_quickie#}</h5>
+
+<div id="boxAddQuickieContent">
+{#text_quickie#}
+{$FORM_ACTION}
+<p class="addquickieform">{$INPUT_FIELD}</p>
+<div class="ajaxAddQuickie" id="ajaxAddQuickie" style="text-align: left;"></div>
+{$SUBMIT_BUTTON}
+{$FORM_END}
+<script type="text/javascript">
+// <![CDATA[
+{literal}
+$(document).ready(function(){
+
+  $("#quick_add_quickie").keyup(function(){
+      var searchString = $("#quick_add_quickie").val(); 
+      $.ajax({
+      	url: "index_ajax.php",             
+      	dataType : "html",
+      	type: "POST",
+      	data: "q=includes/modules/ajax/ajaxAddQuickie.php&quickie="+searchString,
+      	success: function(msg){$("#ajaxAddQuickie").html(msg);}            
+ });     
+                           
+                           
+   });
+
+
+})
+
+{/literal}
+// ]]>
+</script>
+</div>
+</div>
+<!-- /Бокс быстрый заказ -->
