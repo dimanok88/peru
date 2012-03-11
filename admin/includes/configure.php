@@ -21,15 +21,15 @@
 // Define the webserver and path parameters
 // * DIR_FS_* = Filesystem directories (local/physical)
 // * DIR_WS_* = Webserver directories (virtual/URL)
-  define('HTTP_SERVER', 'http://peru'); // eg, http://localhost or - https://localhost should not be empty for productive servers
-  define('HTTP_CATALOG_SERVER', 'http://peru');
-  define('HTTPS_CATALOG_SERVER', 'http://peru');
+  define('HTTP_SERVER', 'http://www.peru.dev'); // eg, http://localhost or - https://localhost should not be empty for productive servers
+  define('HTTP_CATALOG_SERVER', 'http://www.peru.dev');
+  define('HTTPS_CATALOG_SERVER', 'http://www.peru.dev');
   define('ENABLE_SSL_CATALOG', 'false'); // secure webserver for catalog module
-  define('DIR_FS_DOCUMENT_ROOT', '/home/nike/webprojects/peru/www/'); // where the pages are located on the server
+  define('DIR_FS_DOCUMENT_ROOT', '/home/nike/web/peru/www/'); // where the pages are located on the server
   define('DIR_WS_ADMIN', '/admin/'); // absolute path required
-  define('DIR_FS_ADMIN', '/home/nike/webprojects/peru/www/admin/'); // absolute pate required
+  define('DIR_FS_ADMIN', '/home/nike/web/peru/www/admin/'); // absolute pate required
   define('DIR_WS_CATALOG', '/'); // absolute path required
-  define('DIR_FS_CATALOG', '/home/nike/webprojects/peru/www/'); // absolute path required
+  define('DIR_FS_CATALOG', '/home/nike/web/peru/www/'); // absolute path required
   define('DIR_WS_IMAGES', 'images/');
   define('DIR_FS_CATALOG_IMAGES', DIR_FS_CATALOG . 'images/');
   define('DIR_FS_CATALOG_ORIGINAL_IMAGES', DIR_FS_CATALOG_IMAGES .'product_images/original_images/');

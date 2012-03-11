@@ -1,9 +1,8 @@
 {config_load file="$language/lang_$language.conf" section="boxes"}
 <!-- Бокс быстрый заказ -->
-<div id="boxAddQuickie">
-<h5>{#heading_add_a_quickie#}</h5>
+<div class="title">{#heading_add_a_quickie#}</div>
+<div class="block src">
 
-<div id="boxAddQuickieContent">
 {#text_quickie#}
 {$FORM_ACTION}
 <p class="addquickieform">{$INPUT_FIELD}</p>
@@ -34,6 +33,5 @@ $(document).ready(function(){
 {/literal}
 // ]]>
 </script>
-</div>
 </div>
 <!-- /Бокс быстрый заказ -->

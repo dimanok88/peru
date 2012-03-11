@@ -38,7 +38,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <?php include(DIR_WS_MODULES.FILENAME_METATAGS); ?>
 <base href="<?php echo (($request_type == 'SSL') ? HTTPS_SERVER : HTTP_SERVER) . DIR_WS_CATALOG; ?>" />
-<link rel="stylesheet" type="text/css" href="<?php echo 'templates/'.CURRENT_TEMPLATE.'/stylesheet.css'; ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo 'templates/'.CURRENT_TEMPLATE.'/css/style.css'; ?>" />
 <?php
 if (isset($_GET['products_id']) && strstr($PHP_SELF, FILENAME_PRODUCT_INFO)) {
 ?>
@@ -337,7 +337,7 @@ require(DIR_WS_INCLUDES.'google_conversiontracking.js.php');
   }
 
 
-$vamTemplate->assign('navtrail',$breadcrumb->trail(' &raquo; '));
+$vamTemplate->assign('navtrail',$breadcrumb->trail(' -> '));
 if (isset($_SESSION['customer_id'])) {
 
 $vamTemplate->assign('logoff',vam_href_link(FILENAME_LOGOFF, '', 'SSL'));

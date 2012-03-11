@@ -30,9 +30,9 @@ require_once (DIR_FS_INC.'vam_draw_password_field.inc.php');
 if (!vam_session_is_registered('customer_id')) {
 
 	$box->assign('FORM_ACTION', '<form id="loginbox" method="post" action="'.vam_href_link(FILENAME_LOGIN, 'action=process', 'SSL').'">');
-	$box->assign('FIELD_EMAIL', vam_draw_input_field('email_address', '', ''));
-	$box->assign('FIELD_PWD', vam_draw_password_field('password', '', ''));
-	$box->assign('BUTTON', vam_image_submit('login.png', IMAGE_BUTTON_LOGIN));
+	$box->assign('FIELD_EMAIL', vam_draw_input_field('email_address', 'ЛОГИН', 'class="txt" onfocus="this.value = \'\';"'));
+	$box->assign('FIELD_PWD', vam_draw_password_field('password', 'ПАРОЛЬ', 'class="txt" onfocus="this.value = \'\';"'));
+	$box->assign('BUTTON', vam_image_submit('', 'ВОЙТИ', 'class="submit"'));
 	$box->assign('LINK_LOST_PASSWORD', vam_href_link(FILENAME_PASSWORD_DOUBLE_OPT, '', 'SSL'));
 	$box->assign('LINK_NEW_ACCOUNT', vam_href_link(FILENAME_CREATE_ACCOUNT, '', 'SSL'));
 	$box->assign('FORM_END', '</form>');

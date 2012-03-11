@@ -23,10 +23,14 @@
 						<div class="flower_l"></div>
 						<div class="flower_r"></div>
 						<ul>
-							<li><a href="#">Главня</a></li>
-							<li><a href="#">Корзина</a></li>
-							<li><a href="#">Оформить</a></li>
-							<li><a href="#">Вход</a></li>
+							<li><a href="{$mainpage}">{#text_mainpage#}</a></li>
+							<li><a href="{$cart}">{#link_cart#}</a></li>
+							<li><a href="{$checkout}">{#link_checkout#}</a></li>
+							{if $smarty.session.customer_id}
+                                <li><a href="{$logoff}">{#link_logoff#}</a></li>
+                            {else}
+                                <li><a href="{$login}">{#link_login#}</a></li>
+                            {/if}
 						</ul>
 					</div>
 				</div>
@@ -40,7 +44,7 @@
 					<div class="ornament left"></div><div class="ornament right"></div>
 					
 					<div class="breadcrumbs">
-						<a href="#">Главная</a> -> <span>Браслеты</span>
+                        {$navtrail}
 					</div>
 					
 					<div class="title">Новинки</div>
@@ -48,7 +52,7 @@
 					<div class="row catalog">
 						
 						<div class="item">
-							<div class="mid"><a href="#"><img src="images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
+							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
 							<div class="bot">
 								<div class="price">250 р.</div>
 								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
@@ -56,7 +60,7 @@
 						</div>
 						
 						<div class="item">
-							<div class="mid"><a href="#"><img src="images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
+							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
 							<div class="bot">
 								<div class="price">250 р.</div>
 								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
@@ -64,7 +68,7 @@
 						</div>
 						
 						<div class="item">
-							<div class="mid"><a href="#"><img src="images/other/01.jpg" alt="0" /><span>Колье и серьги Колье и серьги</span></a></div>
+							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги Колье и серьги</span></a></div>
 							<div class="bot">
 								<div class="price">250 р.</div>
 								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
@@ -72,16 +76,7 @@
 						</div>
 						
 						<div class="item">
-							<div class="mid"><a href="#"><img src="images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
-							<div class="bot">
-								<div class="price">250 р.</div>
-								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
-							</div>
-						</div>
-						
-						<div class="item">
-							<div class="top"></div>
-							<div class="mid"><a href="#"><img src="images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
+							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
 							<div class="bot">
 								<div class="price">250 р.</div>
 								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
@@ -90,7 +85,7 @@
 						
 						<div class="item">
 							<div class="top"></div>
-							<div class="mid"><a href="#"><img src="images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
+							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
 							<div class="bot">
 								<div class="price">250 р.</div>
 								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
@@ -99,7 +94,7 @@
 						
 						<div class="item">
 							<div class="top"></div>
-							<div class="mid"><a href="#"><img src="images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
+							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
 							<div class="bot">
 								<div class="price">250 р.</div>
 								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
@@ -108,7 +103,16 @@
 						
 						<div class="item">
 							<div class="top"></div>
-							<div class="mid"><a href="#"><img src="images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
+							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
+							<div class="bot">
+								<div class="price">250 р.</div>
+								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="top"></div>
+							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
 							<div class="bot">
 								<div class="price">250 р.</div>
 								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
@@ -116,7 +120,8 @@
 						</div>
 						
 					</div>
-					
+
+                    {$main_content}
 					<div class="title">Экзотические украшения ручной работы из Перу</div>
 					
 					<div class="text_place">
@@ -129,43 +134,22 @@
 			</div>
 			<!-- start LEFT -->
 			<div class="left-block">
-			
-				<div class="title">Категории</div>
-				<div class="block">
-					<ul>
-						<li><a href="#">Браслеты</a></li>
-						<li><a href="#">Браслеты</a></li>
-						<li><a href="#">Браслеты</a></li>
-						<li><a href="#">Браслеты</a></li>
-						<li><a href="#">Браслеты</a></li>
-					</ul>
-				</div>
-				
-				<div class="title">Информация</div>
-				<div class="block">
-					<p>В интернет магазине PeruArt вы можете выбрать для себя оригинальные украшения, сделанные в этническом стиле и привезенные прямо из Перу, – страны, которая находится на противоположной от центрального региона России стороне земли.</p>
-				</div>
-				
-				<div class="title">Поиск</div>
-				<div class="block src">
-					<form action="">
-						<div>
-							<input type="text" class="txt" value="ПОИСК" onfocus="this.value = '';" />
-							<input type="submit" class="submit" value="" />
-						</div>
-					</form>
-				</div>
-				
-				<div class="title">Авторизация</div>
-				<div class="block enter">
-					<form action="">
-						<p><input type="text" class="txt" value="Логин" onfocus="this.value = '';" /></p>
-						<p><input type="text" class="txt" value="Пароль" onfocus="this.value = '';" /></p>
-						<div class="t_right"><a href="#">Забыли пароль?</a></div>
-						<div class="t_center"><input type="submit" class="submit" value="ВОЙТИ" /></div>
-					</form>
-				</div>
-			
+                {$box_CATEGORIES}
+                {$box_FILTERS}
+                {$box_CONTENT}
+                {$box_INFORMATION}
+                {$box_ADD_QUICKIE}
+                {$box_LAST_VIEWED}
+                {$box_REVIEWS}
+                {$box_SEARCH}
+                {$box_SPECIALS}
+                {$box_FEATURED}
+                {$box_LATESTNEWS}
+                {$box_ARTICLES}
+                {$box_ARTICLESNEW}
+                {$box_CART}
+                {$box_LOGIN}
+                {$box_ADMIN}
 			</div>
 			<!-- end LEFT -->
 		</div>

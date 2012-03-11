@@ -27,7 +27,7 @@ $box_content='';
 $box->assign('tpl_path','templates/'.CURRENT_TEMPLATE.'/');
 
 $box->assign('FORM_ACTION','<form id="quick_add" method="post" action="' . vam_href_link(basename($PHP_SELF), vam_get_all_get_params(array('action')) . 'action=add_a_quickie', 'NONSSL') . '">');
-$box->assign('INPUT_FIELD',vam_draw_input_field('quickie','','id="quick_add_quickie"'));
+$box->assign('INPUT_FIELD',vam_draw_input_field('quickie','','id="quick_add_quickie" class="txt"'));
 $box->assign('SUBMIT_BUTTON',vam_image_submit('search.png', BOX_HEADING_ADD_PRODUCT_ID));
 $box->assign('FORM_END','</form>');
 

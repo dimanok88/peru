@@ -1,10 +1,8 @@
 {config_load file="$language/lang_$language.conf" section="boxes"}
 {if $filterParams}
 <!-- Бокс фильтры -->
-<div id="boxFilters">
-<h5>{#heading_filters#}</h5>
-
-<div id="boxFiltersContent">
+<div class="title">{#heading_filters#}</div>
+<div class="block">
 
 {literal}
 <script type="text/javascript">
@@ -63,8 +61,6 @@ function open_hide_values(obj, a)
   {#text_filters_price_from#}: <input type="text" size="3" name="price_min" value="{$price_min}" /> {#text_filters_price_to#}: <input type="text" size="3" name="price_max" value="{$price_max}" /> {$BUTTON_FILTER}
   </form>
 {/if}
-
-</div>
 
 </div>
 <!-- /Бокс фильтры -->
