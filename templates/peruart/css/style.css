@@ -107,3 +107,37 @@ a:hover {text-decoration: underline}
 ----------------------------------------------------------------------------------------*/
 .footer {height: 149px; background: url(../images/bg-f.png) no-repeat center 0; position: relative}
 .footer .text {width: 335px; padding: 15px 0 0; color: #fff; margin: 0 auto; text-align: center}
+
+
+/* Вход */
+dl.Login
+   {
+     display: block;
+     width: 49%;
+     float: left;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+   }
+
+dt.Login
+   {
+     float: left;
+     display: block;
+     background: transparent;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     text-align: center;
+   }
+
+dd.Login
+   {
+     display: block;
+     margin: 0 0 0 1em;
+     padding: 0 0 0 0;
+     line-height: normal;
+     background: transparent;
+   }
+
+/* /Вход */
+
+.tr_cart { background: #FFEDD5;}

@@ -172,11 +172,11 @@ require (DIR_WS_INCLUDES.'header.php');
 $vamTemplate->assign('info_message', $info_message);
 $vamTemplate->assign('account_option', ACCOUNT_OPTIONS);
 $vamTemplate->assign('BUTTON_NEW_ACCOUNT', '<a class="button" href="'.vam_href_link(FILENAME_CREATE_ACCOUNT, '', 'SSL').'">'.vam_image_button('submit.png', IMAGE_BUTTON_CONTINUE).'</a>');
-$vamTemplate->assign('BUTTON_LOGIN', vam_image_submit('login.png', IMAGE_BUTTON_LOGIN));
+$vamTemplate->assign('BUTTON_LOGIN', vam_image_submit('', IMAGE_BUTTON_LOGIN, 'class="submit"'));
 $vamTemplate->assign('BUTTON_GUEST', '<a class="button" href="'.vam_href_link(FILENAME_CREATE_GUEST_ACCOUNT, '', 'SSL').'">'.vam_image_button('submit.png', IMAGE_BUTTON_CONTINUE).'</a>');
 $vamTemplate->assign('FORM_ACTION', vam_draw_form('login', vam_href_link(FILENAME_LOGIN, 'action=process', 'SSL')));
-$vamTemplate->assign('INPUT_MAIL', vam_draw_input_field('email_address'));
-$vamTemplate->assign('INPUT_PASSWORD', vam_draw_password_field('password'));
+$vamTemplate->assign('INPUT_MAIL', vam_draw_input_field('email_address', '', 'class="txt"'));
+$vamTemplate->assign('INPUT_PASSWORD', vam_draw_password_field('password', '', 'class="txt"'));
 $vamTemplate->assign('LINK_LOST_PASSWORD', vam_href_link(FILENAME_PASSWORD_DOUBLE_OPT, '', 'SSL'));
 $vamTemplate->assign('FORM_END', '</form>');
 

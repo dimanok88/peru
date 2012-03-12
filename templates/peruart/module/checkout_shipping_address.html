@@ -1,82 +1,85 @@
 {config_load file="$language/lang_$language.conf" section="checkout_shipping_address"}
-<h1>{#heading_address#}</h1>
-{$FORM_ACTION}
-{if $error!=''}
-{$error}
-{/if}
-<div class="page">
-<div class="pagecontent">
+<div class="title">{#heading_address#}</div>
 
-{if $SHIPPING_ADDRESS=='true'} 
-<p>
-<span class="bold">{#title_current_address#}</span>
-</p>
-{/if}
+<div class="text_place">
+    {$FORM_ACTION}
+        {if $error!=''}
+            {$error}
+        {/if}
+        <div class="page">
+        <div class="pagecontent">
 
-{if $SHIPPING_ADDRESS=='true'} 
-<!-- Адрес -->
-<dl class="AddressBook">
-<dt class="AddressBook">
-</dt>
+        {if $SHIPPING_ADDRESS=='true'}
+        <p>
+        <span class="bold">{#title_current_address#}</span>
+        </p>
+        {/if}
 
-<dd class="AddressBook">
-{#text_current_address#}
-</dd>
+        {if $SHIPPING_ADDRESS=='true'}
+        <!-- Адрес -->
+        <dl class="AddressBook">
+        <dt class="AddressBook">
+        </dt>
 
-</dl>
-<!-- /Адрес -->
+        <dd class="AddressBook">
+        {#text_current_address#}
+        </dd>
 
-<!-- Адрес по умолчанию -->
-<dl class="AddressBook">
-<dt class="AddressBook">
-<span class="bold">{#title_current_address#}</span>
-<br />
-<img src="{$tpl_path}img/arrow_south_east.gif" alt="" />
-</dt>
+        </dl>
+        <!-- /Адрес -->
 
-<dd class="AddressBook">
-{$ADDRESS_LABEL}
-</dd>
+        <!-- Адрес по умолчанию -->
+        <dl class="AddressBook">
+        <dt class="AddressBook">
+        <span class="bold">{#title_current_address#}</span>
+        <br />
+        <img src="{$tpl_path}img/arrow_south_east.gif" alt="" />
+        </dt>
 
-</dl>
-<!-- /Адрес по умолчанию -->
-<div class="clear"></div>
-{/if}
+        <dd class="AddressBook">
+        {$ADDRESS_LABEL}
+        </dd>
 
-{if $BLOCK_ADDRESS}
-<p>
-<span class="bold">{#title_old_addresses#}</span>
-</p>
+        </dl>
+        <!-- /Адрес по умолчанию -->
+        <div class="clear"></div>
+        {/if}
 
-<p>
-{#text_old_addresses#}
-</p>
+        {if $BLOCK_ADDRESS}
+        <p>
+        <span class="bold">{#title_old_addresses#}</span>
+        </p>
 
-{$BLOCK_ADDRESS}
+        <p>
+        {#text_old_addresses#}
+        </p>
 
-{else}
+        {$BLOCK_ADDRESS}
 
-{if $MODULE_new_address}
-{$MODULE_new_address}
-{/if}
+        {else}
 
-<p>
-<span class="bold">{#title_continue#}</span>
-</p>
+        {if $MODULE_new_address}
+        {$MODULE_new_address}
+        {/if}
 
-<p>
-{#text_continue#}
-</p>
+        <p>
+        <span class="bold">{#title_continue#}</span>
+        </p>
 
-{/if}
+        <p>
+        {#text_continue#}
+        </p>
 
+        {/if}
+
+        </div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="navigation">
+        <span class="right">{$BUTTON_CONTINUE}</span>
+        {$BUTTON_BACK}
+        </div>
+        <div class="clear"></div>
+    {$FORM_END}
 </div>
-</div>
-
-<div class="clear"></div>
-<div class="navigation">
-<span class="right">{$BUTTON_CONTINUE}</span>
-{$BUTTON_BACK}
-</div>
-<div class="clear"></div>
-{$FORM_END}

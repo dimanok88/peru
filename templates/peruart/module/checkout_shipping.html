@@ -1,65 +1,69 @@
 {config_load file="$language/lang_$language.conf" section="checkout_shipping"}
-<h1>{#heading_shipping#}</h1>
-{$FORM_ACTION}<div class="page">
-<div class="pagecontent">
+<div class="title">{#heading_shipping#}</div>
 
-{if $SHIPPING_ADDRESS=='true'} 
-<span class="bold">{#title_address#}</span>
-{/if}
+<div class="text_place">
+    {$FORM_ACTION}
+        <div class="page">
+        <div class="pagecontent">
 
-{if $SHIPPING_ADDRESS=='true'} 
-<!-- Адрес -->
-<dl class="AddressBook">
-<dt class="AddressBook">
-</dt>
+        {if $SHIPPING_ADDRESS=='true'}
+        <span class="bold">{#title_address#}</span>
+        {/if}
 
-<dd class="AddressBook">
-{#text_addressbook#}
-</dd>
+        {if $SHIPPING_ADDRESS=='true'}
+        <!-- Адрес -->
+        <dl class="AddressBook">
+        <dt class="AddressBook">
+        </dt>
 
-<dd class="AddressBook">
-{$BUTTON_ADDRESS}
-</dd>
+        <dd class="AddressBook">
+        {#text_addressbook#}
+        </dd>
 
-</dl>
-<!-- /Адрес -->
+        <dd class="AddressBook">
+        {$BUTTON_ADDRESS}
+        </dd>
 
-<!-- Адрес по умолчанию -->
-<dl class="AddressBook">
-<dt class="AddressBook">
-<span class="bold">{#title_address#}</span>
-<br />
-<img src="{$tpl_path}img/arrow_south_east.gif" alt="" />
-</dt>
+        </dl>
+        <!-- /Адрес -->
 
-<dd class="AddressBook">
-{$ADDRESS_LABEL}
-</dd>
+        <!-- Адрес по умолчанию -->
+        <dl class="AddressBook">
+        <dt class="AddressBook">
+        <span class="bold">{#title_address#}</span>
+        <br />
+        <img src="{$tpl_path}img/arrow_south_east.gif" alt="" />
+        </dt>
 
-</dl>
-<!-- /Адрес по умолчанию -->
-<div class="clear"></div>
-{/if}
+        <dd class="AddressBook">
+        {$ADDRESS_LABEL}
+        </dd>
 
-<span class="bold">{#title_shipping#}</span>
-<br />
-<br />
-<fieldset class="form">
-<legend>{#text_shipping#}</legend>
-{$SHIPPING_BLOCK}
-</fieldset>
+        </dl>
+        <!-- /Адрес по умолчанию -->
+        <div class="clear"></div>
+        {/if}
 
-<p>
-<span class="bold">{#title_continue#}</span>
-</p>
+        <span class="bold">{#title_shipping#}</span>
+        <br />
+        <br />
+        <fieldset class="form">
+        <legend>{#text_shipping#}</legend>
+        {$SHIPPING_BLOCK}
+        </fieldset>
 
-<p>
-{#text_continue#}
-</p>
+        <p>
+        <span class="bold">{#title_continue#}</span>
+        </p>
+
+        <p>
+        {#text_continue#}
+        </p>
+        </div>
+        </div>
+
+        <div class="pagecontentfooter">
+        {$BUTON_CONTINUE}
+        </div>
+    {$FORM_END}
 </div>
-</div>
-
-<div class="pagecontentfooter">
-{$BUTON_CONTINUE}
-</div>
-{$FORM_END}
