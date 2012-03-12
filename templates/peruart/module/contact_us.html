@@ -11,48 +11,40 @@ $(function () {
 })
 {/literal}
 </script>
-<!-- Заголовок страницы -->
-<h1>{$CONTACT_HEADING}</h1>
-<!-- /Заголовок страницы -->
-{if $error_message!=''}
-<div class="contacterror">{$error_message}</div>
-{/if}
-{if $success!='1'}
-{$FORM_ACTION}
-<!-- Скругленные углы -->
-<div class="page">
-<!-- Содержимое страницы -->
-<div class="pagecontent">
-{$CONTACT_CONTENT}
-<br />
-<br />
-<!-- форма -->
-<fieldset class="form">
-<legend>{$CONTACT_HEADING}</legend>
-	<p>{#text_name#} {$INPUT_NAME}</p>
-	<p>{#text_email#} {$INPUT_EMAIL}</p>
-	<p>{#text_message#} {$INPUT_TEXT}</p>
-</fieldset>
-<!-- /форма -->
+
+<div class="title">{$CONTACT_HEADING}</div>
+
+<div class="text_place">
+    {if $error_message!=''}
+        <div class="contacterror">{$error_message}</div>
+    {/if}
+    
+    {if $success!='1'}
+        {$FORM_ACTION}
+            <div class="page">
+                <div class="pagecontent">
+                    {$CONTACT_CONTENT}
+                    <br />
+                    <table>
+                        <tr>
+                            <td>{#text_name#}</td>
+                            <td>{$INPUT_NAME}</td>
+                        </tr>
+                        <tr>
+                            <td>{#text_email#}</td>
+                            <td>{$INPUT_EMAIL}</td>
+                        </tr>
+                        <tr>
+                            <td>{#text_message#}</td>
+                            <td>{$INPUT_TEXT}</td>
+                        </tr>
+                    </table>
+                 </div>
+                 <div class="pagecontentfooter">{$BUTTON_SUBMIT}</div>
+            </div>
+        {$FORM_END}
+    {else}
+        {#text_success#}
+        <div class="pagecontentfooter">{$BUTTON_CONTINUE}</div>
+    {/if}
 </div>
-<!-- /Содержимое страницы -->
-<!-- /Скругленные углы -->
-<div class="pagecontentfooter">
-{$BUTTON_SUBMIT}
-</div>
-</div>
-{$FORM_END}
-{else}
-<!-- Скругленные углы -->
-<div class="page">
-<!-- Содержимое страницы -->
-<div class="pagecontent">
-{#text_success#}
-</div>
-<!-- /Содержимое страницы -->
-<!-- /Скругленные углы -->
-<div class="pagecontentfooter">
-{$BUTTON_CONTINUE}
-</div>
-</div>
-{/if}

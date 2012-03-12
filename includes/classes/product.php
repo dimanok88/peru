@@ -423,9 +423,9 @@ class product {
 	function getBuyNowButton($id, $name) {
 		global $PHP_SELF;
 		if (AJAX_CART == 'true' && !vam_has_product_attributes($id)) {
-		$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'" onclick="doBuyNow(\''.$id.'\',\'1\'); return false;">'.vam_image('templates/'.CURRENT_TEMPLATE.'/buttons/' . $_SESSION['language'] . '/button_buy_now.png', TEXT_BUY.$name.TEXT_NOW).'</a>';
+		$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'" onclick="doBuyNow(\''.$id.'\',\'1\'); return false;"><b>&nbsp;</b><span>В корзину</span></a>';
 		} else {
-		$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'">'.vam_image('templates/'.CURRENT_TEMPLATE.'/buttons/' . $_SESSION['language'] . '/button_buy_now.png', TEXT_BUY.$name.TEXT_NOW).'</a>';
+		$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'"><b>&nbsp;</b><span>В корзину</span></a>';
 		}
 		
 		return $link;
@@ -435,9 +435,11 @@ class product {
 	function getBuyNowButtonNew($id, $name) {
 		global $PHP_SELF;
 		if (AJAX_CART == 'true' && !vam_has_product_attributes($id)) {
-		$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'" onclick="doBuyNow(\''.$id.'\',\'1\'); return false;">'.vam_image('templates/'.CURRENT_TEMPLATE.'/buttons/' . $_SESSION['language'] . '/button_buy_now.png', TEXT_BUY.$name.TEXT_NOW).'</a>';
+		//$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'" onclick="doBuyNow(\''.$id.'\',\'1\'); return false;">'.vam_image('templates/'.CURRENT_TEMPLATE.'/buttons/' . $_SESSION['language'] . '/button_buy_now.png', TEXT_BUY.$name.TEXT_NOW).'</a>';
+		$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'" onclick="doBuyNow(\''.$id.'\',\'1\'); return false;"><b>&nbsp;</b><span>В корзину</span></a>';
 		} else {
-		$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'">'.vam_image('templates/'.CURRENT_TEMPLATE.'/buttons/' . $_SESSION['language'] . '/button_buy_now.png', TEXT_BUY.$name.TEXT_NOW).'</a>';
+		//$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'">'.vam_image('templates/'.CURRENT_TEMPLATE.'/buttons/' . $_SESSION['language'] . '/button_buy_now.png', TEXT_BUY.$name.TEXT_NOW).'</a>';
+		$link = '<a href="'.vam_href_link(basename($PHP_SELF), 'action=buy_now&BUYproducts_id='.$id.'&'.vam_get_all_get_params(array ('action')), 'NONSSL').'"><b>&nbsp;</b><span>В корзину</span></a>';
 		}
 		
 		return $link;

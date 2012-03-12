@@ -124,10 +124,10 @@ if ($_GET['coID'] == 7) {
 		require (DIR_WS_INCLUDES.'header.php');
 		$vamTemplate->assign('CONTACT_CONTENT', $contact_content);
 		$vamTemplate->assign('FORM_ACTION', vam_draw_form('contact_us', vam_href_link(FILENAME_CONTENT, 'action=send&coID='.(int) $_GET['coID'])));
-		$vamTemplate->assign('INPUT_NAME', vam_draw_input_field('name', ($error ? $_POST['name'] : $first_name)));
-		$vamTemplate->assign('INPUT_EMAIL', vam_draw_input_field('email', ($error ? $_POST['email'] : $email_address)));
+		$vamTemplate->assign('INPUT_NAME', vam_draw_input_field('name', ($error ? $_POST['name'] : $first_name), 'class="txt"'));
+		$vamTemplate->assign('INPUT_EMAIL', vam_draw_input_field('email', ($error ? $_POST['email'] : $email_address), 'class="txt"'));
 		$vamTemplate->assign('INPUT_TEXT', vam_draw_textarea_field('message_body', 'soft', 50, 15, $_POST[''],''));
-		$vamTemplate->assign('BUTTON_SUBMIT', vam_image_submit('submit.png',  IMAGE_BUTTON_CONTINUE));
+		$vamTemplate->assign('BUTTON_SUBMIT', vam_image_submit('',  IMAGE_BUTTON_CONTINUE, 'class="submit"'));
 		$vamTemplate->assign('FORM_END', '</form>');
 	}
 

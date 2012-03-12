@@ -33,16 +33,16 @@ require (DIR_WS_INCLUDES.'header.php');
 
 $vamTemplate->assign('FORM_ACTION', vam_draw_form('advanced_search', vam_href_link(FILENAME_ADVANCED_SEARCH_RESULT, '', 'NONSSL', false), 'get', 'onsubmit="return check_form(this);"').vam_hide_session_id());
 
-$vamTemplate->assign('INPUT_KEYWORDS', vam_draw_input_field('keywords', '', ''));
+$vamTemplate->assign('INPUT_KEYWORDS', vam_draw_input_field('keywords', '', ' class="txt"'));
 $vamTemplate->assign('HELP_LINK', 'javascript:popupWindow(\''.vam_href_link(FILENAME_POPUP_SEARCH_HELP).'\')');
-$vamTemplate->assign('BUTTON_SUBMIT', vam_image_submit('search.png', IMAGE_BUTTON_SEARCH));
+$vamTemplate->assign('BUTTON_SUBMIT', vam_image_submit('', IMAGE_BUTTON_SEARCH, 'class="submit"'));
 
 
 $vamTemplate->assign('SELECT_CATEGORIES',vam_draw_pull_down_menu('categories_id', vam_get_categories(array (array ('id' => '', 'text' => TEXT_ALL_CATEGORIES)))));
 $vamTemplate->assign('ENTRY_SUBCAT',vam_draw_checkbox_field('inc_subcat', '1', true));
 $vamTemplate->assign('SELECT_MANUFACTURERS',vam_draw_pull_down_menu('manufacturers_id', vam_get_manufacturers(array (array ('id' => '', 'text' => TEXT_ALL_MANUFACTURERS)))));
-$vamTemplate->assign('SELECT_PFROM',vam_draw_input_field('pfrom'));
-$vamTemplate->assign('SELECT_PTO',vam_draw_input_field('pto'));
+$vamTemplate->assign('SELECT_PFROM',vam_draw_input_field('pfrom', '' , 'class="txt"'));
+$vamTemplate->assign('SELECT_PTO',vam_draw_input_field('pto', '' , 'class="txt"'));
 
 
 $error = '';

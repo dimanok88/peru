@@ -46,8 +46,8 @@
 
   // search field
   $module->assign('FORM_ACTION',vam_draw_form('new_find', vam_href_link(FILENAME_ADVANCED_SEARCH_RESULT, '', 'NONSSL', false), 'get').vam_hide_session_id());
-  $module->assign('INPUT_SEARCH',vam_draw_input_field('keywords', '', 'size="30" maxlength="30"'));
-  $module->assign('BUTTON_SUBMIT',vam_image_submit('search.png', BOX_HEADING_SEARCH));
+  $module->assign('INPUT_SEARCH',vam_draw_input_field('keywords', '', 'size="30" maxlength="30" class="txt"'));
+  $module->assign('BUTTON_SUBMIT',vam_image_submit('', BOX_HEADING_SEARCH, 'class="submit"'));
   $module->assign('LINK_ADVANCED',vam_href_link(FILENAME_ADVANCED_SEARCH));
   $module->assign('FORM_END', '</form>');
 

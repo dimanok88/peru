@@ -2,7 +2,21 @@
 {config_load file="$language/lang_$language.conf" section="index"}
 {if $deny_cart neq 'true'}
 <!-- Бокс корзина -->
-<div class="title"><a href="{$LINK_CART}">{#heading_cart#}</a></div>
+
+<div class="flr mini_cart">
+	<div class="in">
+		<div class="chest"></div>
+		<div class="title"><a href="{$LINK_CART}">{#heading_cart#}</a></div>
+        {if $empty=='false'}
+            <p>Товаров: {$COUNT}</p>
+            <p>На сумму: {$TOTAL}</p>
+        {else}
+            {#text_empty_cart#}
+        {/if}
+	</div>
+</div>
+
+<!--div class="title"><a href="{$LINK_CART}">{#heading_cart#}</a></div>
 <div class="block">
 {if $empty=='false'}
 {foreach name=aussen item=products_data from=$products}
@@ -38,11 +52,10 @@
         <p class="CartContentCenter">
         <a href="{$LINK_CHECKOUT}">{#text_checkout#}</a>
         </p>
-        {else} <!-- Пустая корзина -->
+        {else}
         <p>
         {#text_empty_cart#}
         </p>
     {/if}
-<!-- /Бокс корзина -->
 {/if}
-</div>
+</div-->

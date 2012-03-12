@@ -10,20 +10,16 @@
 					<a href="#">peruart.ru</a>
 					<p>exclusive hand made Peru</p>
 				</div>
-				<div class="flr mini_cart">
-					<div class="in">
-						<div class="chest"></div>
-						<div class="title">Корзина</div>
-						<p>Товаров:</p>
-						<p>На сумму:</p>
-					</div>
-				</div>
+				{$box_CART}
 				<div class="menu">
 					<div class="inner">
 						<div class="flower_l"></div>
 						<div class="flower_r"></div>
 						<ul>
 							<li><a href="{$mainpage}">{#text_mainpage#}</a></li>
+                            {if $account}{if $smarty.session.customer_id}
+                                <li><a href="{$account}">{#link_account#}</a></li>
+                            {/if}{/if}
 							<li><a href="{$cart}">{#link_cart#}</a></li>
 							<li><a href="{$checkout}">{#link_checkout#}</a></li>
 							{if $smarty.session.customer_id}
@@ -59,66 +55,6 @@
 							</div>
 						</div>
 						
-						<div class="item">
-							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
-							<div class="bot">
-								<div class="price">250 р.</div>
-								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
-							</div>
-						</div>
-						
-						<div class="item">
-							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги Колье и серьги</span></a></div>
-							<div class="bot">
-								<div class="price">250 р.</div>
-								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
-							</div>
-						</div>
-						
-						<div class="item">
-							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
-							<div class="bot">
-								<div class="price">250 р.</div>
-								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
-							</div>
-						</div>
-						
-						<div class="item">
-							<div class="top"></div>
-							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
-							<div class="bot">
-								<div class="price">250 р.</div>
-								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
-							</div>
-						</div>
-						
-						<div class="item">
-							<div class="top"></div>
-							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
-							<div class="bot">
-								<div class="price">250 р.</div>
-								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
-							</div>
-						</div>
-						
-						<div class="item">
-							<div class="top"></div>
-							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
-							<div class="bot">
-								<div class="price">250 р.</div>
-								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
-							</div>
-						</div>
-						
-						<div class="item">
-							<div class="top"></div>
-							<div class="mid"><a href="#"><img src="{$tpl_path}images/other/01.jpg" alt="0" /><span>Колье и серьги</span></a></div>
-							<div class="bot">
-								<div class="price">250 р.</div>
-								<div class="in_cart"><a href="#"><b>&nbsp;</b><span>В корзину</span></a></div>
-							</div>
-						</div>
-						
 					</div>
 
                     {$main_content}
@@ -147,9 +83,20 @@
                 {$box_LATESTNEWS}
                 {$box_ARTICLES}
                 {$box_ARTICLESNEW}
-                {$box_CART}
                 {$box_LOGIN}
                 {$box_ADMIN}
+
+                {$box_DOWNLOADS}
+                {$box_AFFILIATE}
+                {$box_WHATSNEW}
+                {$box_NEWSLETTER}
+                {$box_BESTSELLERS}
+                {$box_INFOBOX}
+                {$box_CURRENCIES}
+                {$box_LANGUAGES}
+                {$box_MANUFACTURERS}
+                {$box_MANUFACTURERS_INFO}
+                {$box_FAQ}
 			</div>
 			<!-- end LEFT -->
 		</div>

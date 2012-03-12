@@ -21,12 +21,12 @@ $js_src = DIR_WS_INCLUDES .'javascript/tiny_mce/tiny_mce.js';
 $tiny_mce_file_browser_callback = 'ajaxfilemanager';
 
 	switch($type) {
-                // WYSIWYG editor latest news textarea named latest_news
+                // WYSIWYG editor latest news textareas named latest_news
                 case 'latest_news':
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -91,12 +91,12 @@ function toggleHTMLEditor(id) {
                         	   	';
                         break;
 
-                // WYSIWYG editor faq textarea named faq
+                // WYSIWYG editor faq textareas named faq
                 case 'faq':
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -161,12 +161,12 @@ function toggleHTMLEditor(id) {
                         	   	';
                         break;
 
-                // WYSIWYG editor latest news textarea named articles_description
+                // WYSIWYG editor latest news textareas named articles_description
                 case 'articles_description':
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -231,12 +231,12 @@ function toggleHTMLEditor(id) {
                         	   	';
                         break;
 
-                // WYSIWYG editor latest news textarea named topics_description
+                // WYSIWYG editor latest news textareas named topics_description
                 case 'topics_description':
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -301,12 +301,12 @@ function toggleHTMLEditor(id) {
                         	   	';
                         break;
 
-                // WYSIWYG editor products description textarea named products_description
+                // WYSIWYG editor products description textareas named products_description
                 case 'products_description':
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -371,12 +371,12 @@ function toggleHTMLEditor(id) {
                         	   	';
                         break;
 
-                // WYSIWYG editor products short description textarea named products_short_description
+                // WYSIWYG editor products short description textareas named products_short_description
                 case 'products_short_description':
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -446,7 +446,7 @@ function toggleHTMLEditor(id) {
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -515,7 +515,7 @@ function toggleHTMLEditor(id) {
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -585,7 +585,7 @@ function toggleHTMLEditor(id) {
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -655,7 +655,7 @@ function toggleHTMLEditor(id) {
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",
@@ -725,7 +725,7 @@ function toggleHTMLEditor(id) {
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
 <script type="text/javascript">
 tinyMCE.init({
-	mode : "none",
+	mode : "textareas",
 	editor_deselector : "notinymce",
 	theme : "advanced",
 	language : "'.$lang.'",

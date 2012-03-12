@@ -73,7 +73,9 @@ if ($_SESSION['cart']->count_contents() > 0) {
 
 	
 	}
+
 	$box->assign('PRODUCTS', $qty);
+    $box->assign('COUNT', $qty);
 	$box->assign('empty', 'false');
 } else {
 	// cart empty
