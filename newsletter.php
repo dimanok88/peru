@@ -160,15 +160,15 @@ $breadcrumb->add(NAVBAR_TITLE_NEWSLETTER, vam_href_link(FILENAME_NEWSLETTER, '',
 require (DIR_WS_INCLUDES.'header.php');
 
 $vamTemplate->assign('CAPTCHA_IMG', '<img src="'.vam_href_link(FILENAME_DISPLAY_CAPTCHA).'" alt="captcha" />');
-$vamTemplate->assign('CAPTCHA_INPUT', vam_draw_input_field('captcha', '', 'size="6"', 'text', false));
+$vamTemplate->assign('CAPTCHA_INPUT', vam_draw_input_field('captcha', '', 'size="6" class="txt"', 'text', false));
 
 $vamTemplate->assign('text_newsletter', TEXT_NEWSLETTER);
 $vamTemplate->assign('info_message', $info_message);
 $vamTemplate->assign('FORM_ACTION', vam_draw_form('sign', vam_href_link(FILENAME_NEWSLETTER, 'action=process', 'NONSSL')));
-$vamTemplate->assign('INPUT_EMAIL', vam_draw_input_field('email', vam_db_input($_POST['email'])));
+$vamTemplate->assign('INPUT_EMAIL', vam_draw_input_field('email', vam_db_input($_POST['email']), 'class="txt"'));
 $vamTemplate->assign('CHECK_INP', vam_draw_radio_field('check', 'inp'));
 $vamTemplate->assign('CHECK_DEL', vam_draw_radio_field('check', 'del'));
-$vamTemplate->assign('BUTTON_SEND', vam_image_submit('submit.png', IMAGE_BUTTON_LOGIN));
+$vamTemplate->assign('BUTTON_SEND', vam_image_submit('', IMAGE_BUTTON_LOGIN, 'class="submit"'));
 $vamTemplate->assign('FORM_END', '</form>');
 
 $vamTemplate->assign('language', $_SESSION['language']);

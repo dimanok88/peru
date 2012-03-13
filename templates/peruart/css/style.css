@@ -12,8 +12,8 @@ html, body, div, span, p, img, fieldset, form, label {margin:0; padding:0; borde
 body {background: #FCE5C3 url(../images/bg.jpg) repeat-y center 0; min-width: 1002px; color:#674a3b}
 body, input {font:12px/14px Verdana, 'Geneva CY', 'DejaVu Sans', sans-serif}
 
-.txt {color: #d1c7b1; padding: 0 11px; width: 162px; border: 0; font-size: 20px; height: 31px; line-height: 31px; background: url(../images/input.png) no-repeat 0 0}
-.submit {cursor: pointer; border: 0; width: 172px; height: 32px; font-size: 14px; line-height: 32px; background: url(../images/submit.png) no-repeat 0 0; overflow: visible; color: #f5e8c1}
+.txt {color: #d1c7b1; padding: 0 11px; width: 162px; border: 0 !important; font-size: 20px; height: 31px; line-height: 31px; background: url(../images/input.png) no-repeat 0 0}
+.submit {cursor: pointer; border: 0 !important; width: 172px; height: 32px; font-size: 14px; line-height: 32px; background: url(../images/submit.png) no-repeat 0 0; overflow: visible; color: #f5e8c1}
 textarea { background: #FFEDD5; color: #d1c7b1; border: 1px solid #CFAA74;}
 
 a, input:focus {outline: none}
@@ -141,3 +141,6 @@ dd.Login
 /* /Вход */
 
 .tr_cart { background: #FFEDD5;}
+
+.tr_conf { background: #FFEDD5; }
+.title_ship { display: table-cell; vertical-align: middle;}

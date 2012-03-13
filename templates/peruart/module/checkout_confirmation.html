@@ -1,118 +1,113 @@
-{config_load file="$language/lang_$language.conf" section="checkout_confirmation"} 
-<h1>{#heading_confirmation#}</h1>
-<div class="page">
-<div class="pagecontent">
-<p>
-{#text_information#}
-</p>
-<br />
-{if $IP_LOG=='true'} 
-<span class="bold">{#text_ip#}</span> {$CUSTOMERS_IP}
-<br />
-{/if}
-<br />
-{if $SHIPPING_ADDRESS=='true'} 
-<!-- Адрес доставки -->
-<dl class="ordersAddress">
-<dt class="ordersAddress">
-</dt>
+{config_load file="$language/lang_$language.conf" section="checkout_confirmation"}
+<div class="title">{#heading_confirmation#}</div>
 
-<dd class="ordersAddress">
-<span class="bold">{#text_shipping_address#} <a href="{$SHIPPING_ADDRESS_EDIT}">{#text_edit#}</a></span>
-</dd>
+<div class="text_place">
+    <p>{#text_information#}</p>
+    <br />
+    {if $IP_LOG=='true'}
+    <span class="bold">{#text_ip#}</span> {$CUSTOMERS_IP}
+    <br />
+    {/if}
+    {if $SHIPPING_ADDRESS=='true'}
+    <!-- Адрес доставки -->
+    <dl class="ordersAddress">
+    <dt class="ordersAddress">
+    </dt>
 
-<dd class="ordersAddress">
-{$DELIVERY_LABEL}
-</dd>
+    <dd class="ordersAddress">
+    <span class="bold"><b>{#text_shipping_address#}:</b> <a href="{$SHIPPING_ADDRESS_EDIT}">{#text_edit#}</a></span>
+    </dd>
 
-</dl>
-<!-- /Адрес доставки -->
-{/if}
+    <dd class="ordersAddress">
+    {$DELIVERY_LABEL}
+    </dd>
 
-{if $BILLING_LABEL}
-<!-- Адрес клиента -->
-<dl class="ordersAddress">
-<dt class="ordersAddress">
-</dt>
+    </dl>
+    <!-- /Адрес доставки -->
+    {/if}
 
-<dd class="ordersAddress">
-<span class="bold">{#text_payment_address#}:</span> <a href="{$BILLING_ADDRESS_EDIT}">{#text_edit#}</a>
-</dd>
+    {if $BILLING_LABEL}
+    <!-- Адрес клиента -->
+    <dl class="ordersAddress">
+    <dt class="ordersAddress">
+    </dt>
 
-<dd class="ordersAddress">
-{$BILLING_LABEL}
-</dd>
+    <dd class="ordersAddress">
+    <span class="bold"><b>{#text_payment_address#}:</b></span> <a href="{$BILLING_ADDRESS_EDIT}">{#text_edit#}</a>
+    </dd>
 
-</dl>
-<!-- /Адрес клиента -->
-{/if}
-<div class="clear"></div>
-<br />
-{if $SHIPPING_METHOD}
-<span class="bold">{#text_shipping_method#}</span>&nbsp;{$SHIPPING_METHOD}&nbsp;<a href="{$SHIPPING_EDIT}">{#text_edit#}</a>
-<br />
-{/if}
+    <dd class="ordersAddress">
+    {$BILLING_LABEL}
+    </dd>
 
-{if $PAYMENT_METHOD!=''}
-<span class="bold">{#text_payment_method#}</span>&nbsp;{$PAYMENT_METHOD}&nbsp;<a href="{$PAYMENT_EDIT}">{#text_edit#}</a>
-<br />
-{/if}
+    </dl>
+    <!-- /Адрес клиента -->
+    {/if}
+    <div class="clear"></div>
+    <br />
+    {if $SHIPPING_METHOD}
+    <span class="bold"><b>{#text_shipping_method#}</b></span>&nbsp;{$SHIPPING_METHOD}&nbsp;<a href="{$SHIPPING_EDIT}">{#text_edit#}</a>
+    <br />
+    {/if}
 
-{if $ORDER_COMMENTS!=''}
-<span class="bold">{#text_comments#}</span>&nbsp;<a href="{$PAYMENT_EDIT}">{#text_edit#}</a>
-<br />
-{$ORDER_COMMENTS}
-<br />
-{/if}
+    {if $PAYMENT_METHOD!=''}
+    <span class="bold"><b>{#text_payment_method#}</b></span>&nbsp;{$PAYMENT_METHOD}&nbsp;<a href="{$PAYMENT_EDIT}">{#text_edit#}</a>
+    <br />
+    {/if}
 
-{if $PAYMENT_INFORMATION!=''}
-<span class="bold">{#text_payment_info#}</span>
-<br />
-{$PAYMENT_INFORMATION}
-<br />
-{/if}
+    {if $ORDER_COMMENTS!=''}
+    <span class="bold"><b>{#text_comments#}</b></span>&nbsp;<a href="{$PAYMENT_EDIT}">{#text_edit#}</a>
+    <br />
+    {$ORDER_COMMENTS}
+    <br />
+    {/if}
 
-<span class="bold">{#text_products#}</span>&nbsp;<a href="{$PRODUCTS_EDIT}">{#text_edit#}</a>
-<br />
-<br />
+    {if $PAYMENT_INFORMATION!=''}
+    <span class="bold"><b>{#text_payment_info#}</b></span>
+    <br />
+    {$PAYMENT_INFORMATION}
+    <br />
+    {/if}
 
-<!-- товары -->
-<table width="100%" border="0" cellspacing="0" cellpadding="4">
-  <tr> 
-    <td> 
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>{$PRODUCTS_BLOCK}</td>
-        </tr>
-        <tr>
-          <td align="right">{$TOTAL_BLOCK}</td>
-        </tr>
-      </table></td>
-  </tr>
-</table>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td align="right">{$CHECKOUT_FORM} {if $MODULE_BUTTONS!=''} {$MODULE_BUTTONS}<br />{/if} {$CHECKOUT_BUTTON}<br /><br />
-	<table width="100%"  border="0" cellpadding="4">
-        <tr>
-          <td>{if $REVOCATION}
-		  <b>{$REVOCATION_TITLE}</b><br />
-		  
-		  {$REVOCATION}<br />
-		  <table width="100%" border="0" cellspacing="0" cellpadding="3">
+    <span class="bold"><b>{#text_products#}</b></span>&nbsp;<a href="{$PRODUCTS_EDIT}">{#text_edit#}</a>
+    <br />
+    <br />
+
+    <!-- товары -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+      <tr>
+        <td>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
-              <td class="main"><img src="{$tpl_path}img/arrow_green.gif" alt="arrow" />{$REVOCATION_TITLE}&nbsp;{$REVOCATION_LINK}</td>
+              <td>{$PRODUCTS_BLOCK}</td>
             </tr>
             <tr>
-              <td class="main"><img src="{$tpl_path}img/arrow_green.gif" alt="arrow" />{$AGB_TITLE}&nbsp;{$AGB_LINK}</td>
+              <td align="right">{$TOTAL_BLOCK}</td>
             </tr>
-          </table>
-		  {/if}</td>
-        </tr>
-      </table></td>
-  </tr>
-</table>
-<!-- /товары -->
+          </table></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="right">{$CHECKOUT_FORM} {if $MODULE_BUTTONS!=''} {$MODULE_BUTTONS}<br />{/if} {$CHECKOUT_BUTTON}<br /><br />
+        <table width="100%"  border="0" cellpadding="4">
+            <tr>
+              <td>{if $REVOCATION}
+              <b>{$REVOCATION_TITLE}</b><br />
 
-</div>
+              {$REVOCATION}<br />
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr>
+                  <td class="main"><img src="{$tpl_path}img/arrow_green.gif" alt="arrow" />{$REVOCATION_TITLE}&nbsp;{$REVOCATION_LINK}</td>
+                </tr>
+                <tr>
+                  <td class="main"><img src="{$tpl_path}img/arrow_green.gif" alt="arrow" />{$AGB_TITLE}&nbsp;{$AGB_LINK}</td>
+                </tr>
+              </table>
+              {/if}</td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+    <!-- /товары -->
 </div>

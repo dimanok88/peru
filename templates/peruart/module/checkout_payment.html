@@ -1,89 +1,91 @@
-{config_load file="$language/lang_$language.conf" section="checkout_payment"}<h1>{#heading_payment#}</h1>
-{$FORM_ACTION}{if $error!=''}
-{$error}
-{/if}<div class="page">
-<div class="pagecontent">
+{config_load file="$language/lang_$language.conf" section="checkout_payment"}
+<div class="title">{#heading_payment#}</div>
 
-{if $BILLING_ADDRESS=='true'} 
-<span class="bold">{#title_address#}</span>
-{/if}
+<div class="text_place">
+    {$FORM_ACTION}
+        {if $error!=''}
+        {$error}
+        {/if}
+        <div class="page">
+        <div class="pagecontent">
 
-{if $BILLING_ADDRESS=='true'} 
-<!-- Адрес -->
-<dl class="AddressBook">
-<dt class="AddressBook">
-</dt>
+        {if $BILLING_ADDRESS=='true'}
+        <span class="bold">{#title_address#}</span>
+        {/if}
 
-<dd class="AddressBook">
-{#text_address#}
-</dd>
+        {if $BILLING_ADDRESS=='true'}
+        <!-- Адрес -->
+        <dl class="AddressBook">
+        <dt class="AddressBook">
+        </dt>
 
-<dd class="AddressBook">
-{$BUTTON_ADDRESS}
-</dd>
+        <dd class="AddressBook">
+        {#text_address#}
+        </dd>
 
-</dl>
-<!-- /Адрес -->
+        <dd class="AddressBook">
+        {$BUTTON_ADDRESS}
+        </dd>
 
-<!-- Адрес по умолчанию -->
-<dl class="AddressBook">
-<dt class="AddressBook">
-<span class="bold">{#title_address#}</span>
-<br />
-<img src="{$tpl_path}img/arrow_south_east.gif" alt="" />
-</dt>
+        </dl>
+        <!-- /Адрес -->
 
-<dd class="AddressBook">
-{$ADDRESS_LABEL}
-</dd>
+        <!-- Адрес по умолчанию -->
+        <dl class="AddressBook">
+        <dt class="AddressBook">
+        <span class="bold">{#title_address#}</span>
+        <br />
+        <img src="{$tpl_path}img/arrow_south_east.gif" alt="" />
+        </dt>
 
-</dl>
-<!-- /Адрес по умолчанию -->
-<div class="clear"></div>
-{/if}
+        <dd class="AddressBook">
+        {$ADDRESS_LABEL}
+        </dd>
 
-<span class="bold">{#title_payment#}</span>
-<br />
-<br />
-{if $GV_COVER!='true'}
-<fieldset class="form">
-<legend>{#text_payment#}</legend>
-{$PAYMENT_BLOCK}
-</fieldset>
-{$module_gift}
-{else}
-{#text_gccover#}
-{/if}
+        </dl>
+        <!-- /Адрес по умолчанию -->
+        <div class="clear"></div>
+        {/if}
 
-<fieldset class="form">
-<legend>{#title_comments#}</legend>
-<p>
-{$COMMENTS}
-</p>
-</fieldset>
+        <h2>{#title_payment#}</h2>
+        {if $GV_COVER!='true'}
+            {$PAYMENT_BLOCK}
+            {$module_gift}
+        {else}
+            {#text_gccover#}
+        {/if}
 
-{if $conditions=='true'}
-<fieldset class="form">
-<legend>{#title_agb#}&nbsp;{$AGB_LINK}</legend>
-<p>
-{$AGB}
-</p><p>
-{$AGB_checkbox} <span class="bold">{#text_accept_agb#}</span>
-</p>
-</fieldset>
-{/if}
+        <fieldset class="form">
+        <legend>{#title_comments#}</legend>
+        <p>
+        {$COMMENTS}
+        </p>
+        </fieldset>
 
-<p>
-<span class="bold">{#title_continue#}</span>
-</p>
+        {if $conditions=='true'}
+        <fieldset class="form">
+        <legend>{#title_agb#}&nbsp;{$AGB_LINK}</legend>
+        <p>
+        {$AGB}
+        </p>
+        <p>
+        {$AGB_checkbox} <span class="bold">{#text_accept_agb#}</span>
+        </p>
+        </fieldset>
+        {/if}
 
-<p>
-{#text_continue#}
-</p>
+        <p>
+        <span class="bold">{#title_continue#}</span>
+        </p>
+
+        <p>
+        {#text_continue#}
+        </p>
+        </div>
+        </div>
+
+        <div class="pagecontentfooter">
+        {$BUTTON_CONTINUE}
+        </div>
+    {$FORM_END}
 </div>
-</div>
-
-<div class="pagecontentfooter">
-{$BUTTON_CONTINUE}
-</div>
-{$FORM_END}

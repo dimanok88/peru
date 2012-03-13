@@ -197,13 +197,13 @@ if (sizeof($order->info['tax_groups']) > 1) {
 } else {
 
 }
-$data_products = '<table border="0" cellspacing="0" cellpadding="0">';
+$data_products = '<table width="100%" border="0" cellspacing="0">';
 for ($i = 0, $n = sizeof($order->products); $i < $n; $i++) {
 
-	$data_products .= '<tr>' . "\n" . '            <td class="main" align="left" valign="top">' . $order->products[$i]['qty'] . ' x ' . $order->products[$i]['name'] . '</td>' . "\n" . '                <td class="main" align="right" valign="top">' . $vamPrice->Format($order->products[$i]['final_price'], true) . '</td></tr>' . "\n";
+	$data_products .= '<tr class="tr_conf">' . "\n" . '            <td class="main" align="left" valign="top">' . $order->products[$i]['qty'] . ' x ' . $order->products[$i]['name'] . '</td>' . "\n" . '                <td class="main" align="right" valign="top">' . $vamPrice->Format($order->products[$i]['final_price'], true) . '</td></tr>' . "\n";
 	if (ACTIVATE_SHIPPING_STATUS == 'true') {
 
-		$data_products .= '<tr>
+		$data_products .= '<tr class="tr_conf">
 							<td class="main" align="left" valign="top">
 							<small>' . SHIPPING_TIME . $order->products[$i]['shipping_time'] . '
 							</small></td>
@@ -212,7 +212,7 @@ for ($i = 0, $n = sizeof($order->products); $i < $n; $i++) {
 	}
 	if ((isset ($order->products[$i]['attributes'])) && (sizeof($order->products[$i]['attributes']) > 0)) {
 		for ($j = 0, $n2 = sizeof($order->products[$i]['attributes']); $j < $n2; $j++) {
-			$data_products .= '<tr>
+			$data_products .= '<tr class="tr_conf">
 								<td class="main" align="left" valign="top">
 								<small>&nbsp;<i> - ' . $order->products[$i]['attributes'][$j]['option'] . ': ' . $order->products[$i]['attributes'][$j]['value'] . '
 								</i></small></td>
@@ -283,7 +283,7 @@ if (is_array($payment_modules->modules)) {
 	$payment_button .= $payment_modules->process_button();
 }
 $vamTemplate->assign('MODULE_BUTTONS', $payment_button);
-$vamTemplate->assign('CHECKOUT_BUTTON', vam_image_submit('submit.png', IMAGE_BUTTON_CONFIRM_ORDER) . '</form>' . "\n");
+$vamTemplate->assign('CHECKOUT_BUTTON', vam_image_submit('', IMAGE_BUTTON_CONFIRM_ORDER, "class='submit'") . '</form>' . "\n");
 
 //check if display conditions on checkout page is true
 if (DISPLAY_REVOCATION_ON_CHECKOUT == 'true') {

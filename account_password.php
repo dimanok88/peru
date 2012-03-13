@@ -83,15 +83,15 @@ if ($messageStack->size('account_password') > 0)
 
 $vamTemplate->assign('FORM_ACTION', vam_draw_form('account_password', vam_href_link(FILENAME_ACCOUNT_PASSWORD, '', 'SSL'), 'post', 'onsubmit="return checkform(this);"').vam_draw_hidden_field('action', 'process') . vam_draw_hidden_field('required', 'password_current,password_new,password_confirmation', 'id="required"'));
 
-$vamTemplate->assign('INPUT_ACTUAL', vam_draw_password_fieldNote(array ('name' => 'password_current', 'text' => '&nbsp;'. (vam_not_null(ENTRY_PASSWORD_CURRENT_TEXT) ? '<span class="Requirement">'.ENTRY_PASSWORD_CURRENT_TEXT.'</span>' : '')), '', 'id="password_current"'));
+$vamTemplate->assign('INPUT_ACTUAL', vam_draw_password_fieldNote(array ('name' => 'password_current', 'text' => '&nbsp;'. (vam_not_null(ENTRY_PASSWORD_CURRENT_TEXT) ? '<span class="Requirement">'.ENTRY_PASSWORD_CURRENT_TEXT.'</span>' : '')), '', 'id="password_current" class="txt"'));
 $vamTemplate->assign('ENTRY_PASSWORD_CURRENT_ERROR', ENTRY_PASSWORD_CURRENT_ERROR);
-$vamTemplate->assign('INPUT_NEW', vam_draw_password_fieldNote(array ('name' => 'password_new', 'text' => '&nbsp;'. (vam_not_null(ENTRY_PASSWORD_NEW_TEXT) ? '<span class="Requirement">'.ENTRY_PASSWORD_NEW_TEXT.'</span>' : '')), '', 'id="password_new"'));
+$vamTemplate->assign('INPUT_NEW', vam_draw_password_fieldNote(array ('name' => 'password_new', 'text' => '&nbsp;'. (vam_not_null(ENTRY_PASSWORD_NEW_TEXT) ? '<span class="Requirement">'.ENTRY_PASSWORD_NEW_TEXT.'</span>' : '')), '', 'id="password_new" class="txt"'));
 $vamTemplate->assign('ENTRY_PASSWORD_NEW_ERROR', ENTRY_PASSWORD_NEW_ERROR);
-$vamTemplate->assign('INPUT_CONFIRM', vam_draw_password_fieldNote(array ('name' => 'password_confirmation', 'text' => '&nbsp;'. (vam_not_null(ENTRY_PASSWORD_CONFIRMATION_TEXT) ? '<span class="Requirement">'.ENTRY_PASSWORD_CONFIRMATION_TEXT.'</span>' : '')), '', 'id="password_confirmation"'));
+$vamTemplate->assign('INPUT_CONFIRM', vam_draw_password_fieldNote(array ('name' => 'password_confirmation', 'text' => '&nbsp;'. (vam_not_null(ENTRY_PASSWORD_CONFIRMATION_TEXT) ? '<span class="Requirement">'.ENTRY_PASSWORD_CONFIRMATION_TEXT.'</span>' : '')), '', 'id="password_confirmation" class="txt"'));
 $vamTemplate->assign('ENTRY_PASSWORD_ERROR_NOT_MATCHING', ENTRY_PASSWORD_ERROR_NOT_MATCHING);
 
 $vamTemplate->assign('BUTTON_BACK', '<a class="button" href="'.vam_href_link(FILENAME_ACCOUNT, '', 'SSL').'">'.vam_image_button('back.png', IMAGE_BUTTON_BACK).'</a>');
-$vamTemplate->assign('BUTTON_SUBMIT', vam_image_submit('submit.png',  IMAGE_BUTTON_CONTINUE));
+$vamTemplate->assign('BUTTON_SUBMIT', vam_image_submit('',  IMAGE_BUTTON_CONTINUE, 'class="submit"'));
 $vamTemplate->assign('FORM_END', '</form>');
 
 $vamTemplate->assign('language', $_SESSION['language']);

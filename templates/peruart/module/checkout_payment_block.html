@@ -20,15 +20,34 @@
 			});
 		{/literal}
 		</script>
-{foreach name=aussen item=module_data from=$module_content} <div class="{cycle values="itemOdd,itemEven"}">
-<p>
-<label for="{$module_data.id}">{$module_data.selection} {$module_data.icon} <span class="bold">{$module_data.module}</span> <span class="bold">{$module_data.module_cost}</span></label>
-</p>{if $module_data.description}<p>
-{$module_data.description}
-</p>{/if}
-{if $module_data.error} <p>
-{$module_data.error}
-</p>{else} {foreach name=aussen item=method_data from=$module_data.fields} <p>
-{$method_data.title}&nbsp;{$method_data.field}
-</p> {/foreach}{/if}
-</div>{/foreach}
+
+<table>
+    {foreach name=aussen item=module_data from=$module_content}
+    <tr class="tr_conf"><td>
+        <table width="100%">
+        <tr>
+            <td>{$module_data.selection} <span class="bold">{$module_data.module}</span> <span class="bold">{$module_data.module_cost}</span></td>
+            <td width="200px" align="center">{$module_data.icon}</td>
+        </tr>
+
+        {if $module_data.description}
+        <tr>
+            <td colspan="2">{$module_data.description}</td>
+        </tr>
+        {/if}
+        {if $module_data.error}
+        <tr>
+            <td colspan="2">{$module_data.error}</td>
+        </tr>
+        {else}
+        {foreach name=aussen item=method_data from=$module_data.fields}
+        <tr>
+            <td>{$method_data.title}</td>
+            <td>{$method_data.field}</td>
+        </tr>
+        {/foreach}
+        {/if}
+        </table>
+    </td></tr>
+    {/foreach}
+</table>

@@ -59,7 +59,7 @@ $last_order = $orders['orders_id'];
 $order_status = $orders['orders_status'];
 
 $vamTemplate->assign('FORM_ACTION', vam_draw_form('order', vam_href_link(FILENAME_CHECKOUT_SUCCESS, 'action=update', 'SSL')));
-$vamTemplate->assign('BUTTON_CONTINUE', vam_image_submit('submit.png', IMAGE_BUTTON_CONTINUE));
+$vamTemplate->assign('BUTTON_CONTINUE', vam_image_submit('', IMAGE_BUTTON_CONTINUE, 'class="submit"'));
 $vamTemplate->assign('BUTTON_PRINT', '<a class="button" target="_blank" href="'.vam_href_link(FILENAME_PRINT_ORDER, 'oID='.$orders['orders_id']).'">'.vam_image_button('print.png', IMAGE_BUTTON_PRINT).'</a>');
 $vamTemplate->assign('FORM_END', '</form>');
 // GV Code Start

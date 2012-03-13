@@ -37,12 +37,12 @@
 
   }
 
-  $module->assign('INPUT_FIRSTNAME',vam_draw_input_fieldNote(array('name'=>'firstname','text'=>'&nbsp;' . (vam_not_null(ENTRY_FIRST_NAME_TEXT) ? '<span class="Requirement">' . ENTRY_FIRST_NAME_TEXT . '</span>': '')),$entry['entry_firstname'], 'id="firstname"'));
+  $module->assign('INPUT_FIRSTNAME',vam_draw_input_fieldNote(array('name'=>'firstname','text'=>'&nbsp;' . (vam_not_null(ENTRY_FIRST_NAME_TEXT) ? '<span class="Requirement">' . ENTRY_FIRST_NAME_TEXT . '</span>': '')),$entry['entry_firstname'], 'id="firstname" class="txt"'));
 if (ACCOUNT_SECOND_NAME == 'true') {
 	$module->assign('secondname', '1');
-$module->assign('INPUT_SECONDNAME', vam_draw_input_fieldNote(array ('name' => 'secondname', 'text' => '&nbsp;'. (vam_not_null(ENTRY_SECOND_NAME_TEXT) ? '<span class="Requirement">'.ENTRY_SECOND_NAME_TEXT.'</span>' : '')),$entry['entry_secondname'], 'id="secondname"'));
+$module->assign('INPUT_SECONDNAME', vam_draw_input_fieldNote(array ('name' => 'secondname', 'text' => '&nbsp;'. (vam_not_null(ENTRY_SECOND_NAME_TEXT) ? '<span class="Requirement">'.ENTRY_SECOND_NAME_TEXT.'</span>' : '')),$entry['entry_secondname'], 'id="secondname" class="txt"'));
 }
-  $module->assign('INPUT_LASTNAME',vam_draw_input_fieldNote(array('name'=>'lastname','text'=>'&nbsp;' . (vam_not_null(ENTRY_LAST_NAME_TEXT) ? '<span class="Requirement">' . ENTRY_LAST_NAME_TEXT . '</span>': '')),$entry['entry_lastname'], 'id="lastname"'));
+  $module->assign('INPUT_LASTNAME',vam_draw_input_fieldNote(array('name'=>'lastname','text'=>'&nbsp;' . (vam_not_null(ENTRY_LAST_NAME_TEXT) ? '<span class="Requirement">' . ENTRY_LAST_NAME_TEXT . '</span>': '')),$entry['entry_lastname'], 'id="lastname" class="txt"'));
 
   if (ACCOUNT_COMPANY == 'true') {
   $module->assign('company','1');
@@ -51,7 +51,7 @@ $module->assign('INPUT_SECONDNAME', vam_draw_input_fieldNote(array ('name' => 's
 
   if (ACCOUNT_STREET_ADDRESS == 'true') {
   $module->assign('street_address','1');
-  $module->assign('INPUT_STREET',vam_draw_input_fieldNote(array('name'=>'street_address','text'=>'&nbsp;' . (vam_not_null(ENTRY_STREET_ADDRESS_TEXT) ? '<span class="Requirement">' . ENTRY_STREET_ADDRESS_TEXT . '</span>': '')), $entry['entry_street_address'], 'id="street_address"'));
+  $module->assign('INPUT_STREET',vam_draw_input_fieldNote(array('name'=>'street_address','text'=>'&nbsp;' . (vam_not_null(ENTRY_STREET_ADDRESS_TEXT) ? '<span class="Requirement">' . ENTRY_STREET_ADDRESS_TEXT . '</span>': '')), $entry['entry_street_address'], 'id="street_address" class="txt"'));
   }
 
   if (ACCOUNT_SUBURB == 'true') {
@@ -62,12 +62,12 @@ $module->assign('INPUT_SECONDNAME', vam_draw_input_fieldNote(array ('name' => 's
 
   if (ACCOUNT_POSTCODE == 'true') {
   $module->assign('postcode','1');
-  $module->assign('INPUT_CODE',vam_draw_input_fieldNote(array('name'=>'postcode','text'=>'&nbsp;' . (vam_not_null(ENTRY_POST_CODE_TEXT) ? '<span class="Requirement">' . ENTRY_POST_CODE_TEXT . '</span>': '')), $entry['entry_postcode'], 'id="postcode"'));
+  $module->assign('INPUT_CODE',vam_draw_input_fieldNote(array('name'=>'postcode','text'=>'&nbsp;' . (vam_not_null(ENTRY_POST_CODE_TEXT) ? '<span class="Requirement">' . ENTRY_POST_CODE_TEXT . '</span>': '')), $entry['entry_postcode'], 'id="postcode" class="txt"'));
   }
 
   if (ACCOUNT_CITY == 'true') {
   $module->assign('city','1');
-  $module->assign('INPUT_CITY',vam_draw_input_fieldNote(array('name'=>'city','text'=>'&nbsp;' . (vam_not_null(ENTRY_CITY_TEXT) ? '<span class="Requirement">' . ENTRY_CITY_TEXT . '</span>': '')), $entry['entry_city'], 'id="city"'));
+  $module->assign('INPUT_CITY',vam_draw_input_fieldNote(array('name'=>'city','text'=>'&nbsp;' . (vam_not_null(ENTRY_CITY_TEXT) ? '<span class="Requirement">' . ENTRY_CITY_TEXT . '</span>': '')), $entry['entry_city'], 'id="city" class="txt"'));
   }
   
 if (ACCOUNT_STATE == 'true') {

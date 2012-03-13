@@ -1,16 +1,31 @@
- {if $FREE_SHIPPING} <p>
-<span class="bold">{$FREE_SHIPPING_TITLE}</span>&nbsp;{$FREE_SHIPPING_ICON}</span>
-</p>
+ {if $FREE_SHIPPING} 
 <p>
-{$FREE_SHIPPING_DESCRIPTION}
+<h2><span class="bold">{$FREE_SHIPPING_TITLE}</span>&nbsp;{$FREE_SHIPPING_ICON}</span></h2>
 </p>
-{else}   {foreach name=aussen item=module_data from=$module_content}
-<div class="{cycle values="itemOdd,itemEven"}">   <p>
-{$module_data.icon} <span class="bold">{$module_data.module}</span>
-</p>{if $module_data.error != ''}<p>
-{$module_data.error}
-</p>{else} {foreach name=aussen item=method_data from=$module_data.methods} <p>
-<label for="{$method_data.id}">{$method_data.radio_field}&nbsp;{$method_data.title}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$method_data.price}</label>
-</p> {/foreach}{/if}</div>
-{/foreach}
+{else}
+  <table>
+  {foreach name=aussen item=module_data from=$module_content}
+  <tr class="tr_conf"><td>
+    <table width="100%">
+    <tr>
+        <td><strong>{$module_data.module}</strong></div></td>
+        <td width="150px" align="center">{$module_data.icon}</td>
+    </tr>
+
+    {if $module_data.error != ''}
+    <tr>
+        <td colspan="2">{$module_data.error}</td>
+    </tr>
+    {else}
+            {foreach name=aussen item=method_data from=$module_data.methods}
+            <tr>
+                <td>{$method_data.radio_field}&nbsp;{$method_data.title}</td>
+                <td align="center">{$method_data.price}</td>
+            </tr>
+            {/foreach}
+    {/if}
+    </table>
+    </td></tr>
+    {/foreach}
+    </table>
 {/if}
