@@ -1,0 +1,2650 @@
+/*
+Theme Name: BlueShop
+Theme URI: http://shopos.ru/themes/
+Description: Дополнительная тема ShopOS.
+Version: 2.3.2
+Author: Матецкий Евгений
+Author URI: http://shopos.ru/
+*/
+
+html,body
+   {
+     margin: 0;
+     padding: 0;
+     background: #e9eff5;
+   }
+
+body
+   {
+     font: 76% arial,sans-serif;
+   }
+
+img
+   {
+	  border: 0;
+   }
+
+h2, h3
+   {
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+   }
+   
+/* Цвет обычных ссылок в магазине */
+a 
+   {
+     color: #000;
+     text-decoration: none;
+   }
+
+a:hover 
+   {
+     color: #000;
+     text-decoration: underline;
+   }
+/* /Цвет обычных ссылок в магазине */
+
+/* Центр */
+div#wrapper
+   {
+     float: left;
+     width: 100%;
+   }
+
+div#content
+   {
+     margin: 0 19%; /* отступ центра от боковых колонок */
+     background: #e9eff5;
+   }
+
+/* /Центр */
+
+/* Левая колонка */
+div#left
+   {
+     float: left;
+     width: 18%; /* Ширина левой колонки */
+     margin-left: -100%;
+     background: #e9eff5;
+   }
+/* /Левая колонка */
+
+/* Правая колонка */
+div#right
+   {
+     float: left;
+     overflow: auto;
+     width: 18%; /* Ширина правой колонки */
+     margin-left: -18%;
+     background: #e9eff5;
+   }
+/* /Правая колонка */
+
+/* Низ */
+div#footer
+   {
+     clear: left;
+     width: 100%;
+     background: #e9eff5;
+     border-top: 0px solid #67748B;
+     text-align: center;
+     color: #000;
+   }
+   
+div#footer p
+   {
+     margin: 0;
+     padding: 5px 10px;
+   }
+   
+/* /Низ */
+
+/* Навигация */
+div#navigation 
+   {
+     display: none;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+     padding-left: 10px;
+     border-bottom: 1px solid #000;
+     background: #990000;
+     color: #ffffff;
+   }
+
+#navigation span 
+   {
+     display: block;
+     font: 11px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #ffffff;
+     border-bottom: 2px #990000 solid;
+     background: url(img/navigation.gif) no-repeat left center;
+     padding: 0 0 0 20px; 
+   }
+   
+#navigation a
+   {
+     font: 11px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #ffffff;
+     text-decoration: none;
+   }
+
+#navigation a:hover
+   {
+     font: 11px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #ffffff;
+     text-decoration: none;
+   }
+
+#navigation a:visited
+   {
+     font: 11px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #ffffff;
+     text-decoration: none;
+   }
+   
+/* /Навигация */
+   
+/* Заголовок страницы */
+#content h1 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #757575;
+     background: url(img/msk/title_rvf.jpg);
+     border-bottom: 3px #dfdfdf solid;
+     border-top: 1px #dfdfdf solid;
+     border-left: 1px #dfdfdf solid;
+     border-right: 1px #dfdfdf solid;
+     padding: .5em 0 .5em 5px; 
+     margin: 0.2em 0 0 0; 
+   }
+
+#content h1 a 
+   {
+     color: #757575;
+     text-decoration: none;
+   }
+
+#content h1 a:hover 
+   {
+     color: #757575;
+     text-decoration: none;
+   }
+
+/* /Заголовок страницы */
+
+/* Скругленные углы */
+.page 
+   {
+     background: #f8f8f8;
+     margin-top: 0;
+     border-bottom: 3px #dfdfdf solid;
+     border-top: 1px #dfdfdf solid;
+     border-left: 1px #dfdfdf solid;
+     border-right: 1px #dfdfdf solid;
+   }
+
+.pageItem 
+   {
+     background: #f8f8f8;
+     width: 100%;
+   }
+
+.page h1, .page p 
+   {
+     margin: 0 10px;
+   }
+
+.page h1 
+   {
+     font-size: 2em;
+     color: #fff;
+   }
+
+.page p 
+   {
+     padding-bottom: 0.5em;
+     padding-top: 0.5em;
+   }
+
+.page .b1, .page .b2, .page .b3, .page .b4, .page .b1b, .page .b2b, .page .b3b, .page .b4b 
+   {
+     display: none;
+     overflow: hidden;
+     font-size: 1px;
+   }
+
+.page .b1, .page .b2, .page .b3, .page .b1b, .page .b2b, .page .b3b 
+   {
+     display: none;
+     height: 1px;
+   }
+
+.page .b2 
+   {
+     display: none;
+     background: #f1f1f6;
+     border-left: 1px solid #fff;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b3 
+   {
+     display: none;
+     background: #f1f1f6;
+     border-left: 1px solid #fff;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b4 
+   {
+     display: none;
+     background: #f1f1f6;
+     border-left: 1px solid #fff;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b4b 
+   {
+     display: none;
+     background: #f1f1f6;
+     border-left: 1px solid #f1f1f6;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b3b 
+   {
+     display: none;
+     background: #f1f1f6;
+     border-left: 1px solid #f1f1f6;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b2b 
+   {
+     display: none;
+     background: #f1f1f6;
+     border-left: 1px solid #f1f1f6;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b1 
+   {
+     display: none;
+     margin: 0 5px;
+     background: #fff;
+   }
+
+.page .b2, .page .b2b 
+   {
+     display: none;
+     margin: 0 3px;
+     border-width: 0 2px;
+   }
+
+.page .b3, .page .b3b 
+   {
+     display: none;
+     margin: 0 2px;
+   }
+
+.page .b4, .page .b4b 
+   {
+     display: none;
+     height: 2px;
+     margin: 0 1px;
+   }
+
+.page .b1b 
+   {
+     display: none;
+     margin: 0 5px;
+     background: #f1f1f6;
+   }
+
+.pagecontent 
+   {
+     display: block;
+     padding-left: 0.5em;
+     padding-right: 0.5em;
+     background: #fff;
+   }
+
+.pagecontentfooter 
+   {
+     display: block;
+     text-align: right;
+     background:transparent;
+     margin-top: 0.5em;
+     margin-bottom: 0.5em;
+   }
+/* /Скругленные углы */
+
+/*- Меню-закладки сверху */
+
+#menu 
+   {
+     border-bottom: 1px solid #a3d0e5;
+     border-top: 2px solid #3c6491;
+     background: url(img/msk/hd_f.jpg);
+	  margin-top: 1em;
+	  padding-top: .6em;
+	  margin-bottom: 1em;
+   }
+
+#menu ul, #navigation ul li 
+   {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+   }
+
+#menu ul 
+   {
+	  padding: 5px 0 10px;
+	  text-align: center;
+   }
+
+#menu ul li 
+   {
+	  display: inline;
+	  margin:0 .375em;
+   }
+
+#menu ul li.last 
+   {
+	  margin-right: 0;
+   }
+
+#menu ul li a 
+   {
+	  background: url("img/msk/tab-right.gif") no-repeat 100% 0;
+	  background-color: #67748b;
+	  color: #fff;
+	  padding: 0px 0 0px;
+     font-weight: bold;
+	  text-decoration: none;
+   }
+
+#menu ul li.current a 
+   {
+	  background: url("img/msk/tab-right-active.gif") no-repeat 100% 0;
+	  background-color: #990000;
+	  color: #fff;
+	  padding: 0px 0 1px;
+     font-weight: bold;
+	  text-decoration: none;
+   }
+
+#menu ul li a span 
+   {
+	  background: url("img/msk/tab-left.gif") no-repeat;
+	  padding: 0px 1em;
+     border-bottom:1px solid #44718e;
+   }
+
+#menu ul li.current a span 
+   {
+	  background: url("img/msk/tab-left-active.gif") no-repeat;
+	  padding: 0px 1em 1px;
+     border-bottom:0;
+   }
+
+#menu ul li a:hover span 
+   {
+	  color: #fff;
+     font-weight: bold;
+	  text-decoration: none;
+   }
+
+/*\*//*/
+#menu ul li a 
+   {
+	  display: inline-block;
+	  white-space: nowrap;
+	  width: 1px;
+   }
+
+#menu ul 
+   {
+	  padding-bottom: 0;
+	  margin-bottom: -1px;
+   }
+/**/
+
+/*\*/
+* html #menu ul li a 
+   {
+	  padding: 0;
+   }
+/**/
+
+/*- /Меню-закладки сверху */
+
+/*- Боксы */
+
+/*- Бокс разделы */
+#boxCategories
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса разделы */
+#boxCategories h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса разделы */
+
+/*- Список разделов */
+#categoriesBoxMenu 
+   {
+     padding-left: 0; /* отступ разделов от левого края бокса */
+     border-top: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+   }
+
+#categoriesBoxMenu a
+   {
+     padding: 0.5em 0.3em 0.5em 0.5em;
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 1px solid #dfdfdf; 
+     border-left: 1px solid #dfdfdf; 
+     margin: 0;
+   }
+   
+#categoriesBoxMenu #CatNavi, #CatNavi ul, #CatNavi li 
+   { 
+     margin: 0; 
+     padding: 0; 
+     list-style-type: none; 
+   }
+
+#categoriesBoxMenu #CatNavi li a
+   { 
+     display: block;
+     margin: 0 0 0 0;
+     width: 94%;
+     padding-left: 3px;
+     background: url(img/style1/arrow000.gif) no-repeat left center;
+     color: #000;
+     text-indent: 0.4em;
+     background-color: #fff; 
+     text-decoration: none;
+   }
+
+#categoriesBoxMenu #CatNavi li a:hover
+   { 
+     color: #000; 
+     text-decoration: underline;
+   }
+
+#categoriesBoxMenu #CatNavi .CatLevel1, 
+#categoriesBoxMenu #CatNavi .CatLevel2, 
+#categoriesBoxMenu #CatNavi .CatLevel3,
+#categoriesBoxMenu #CatNavi .CatLevel4,
+#categoriesBoxMenu #CatNavi .CatLevel5,
+#categoriesBoxMenu #CatNavi .CatLevel6
+   {
+     padding-left: 0em;
+   }
+
+#categoriesBoxMenu #CatNavi .CurrentParent a 
+   { 
+     font-weight: bold; 
+   }
+
+#categoriesBoxMenu #CatNavi li a,
+#categoriesBoxMenu #CatNavi .Current li a,
+#categoriesBoxMenu #CatNavi .CurrentParent li a,
+#categoriesBoxMenu #CatNavi .CurrentParent .Current li a 
+   { 
+     font-weight: normal; 
+   }
+
+#categoriesBoxMenu #CatNavi .Current a,
+#categoriesBoxMenu #CatNavi .CurrentParent .Current a 
+   { 
+     font-weight: bold; 
+   }
+   
+/*- /Список разделов */
+
+/*- /Бокс разделы */
+
+/*- Бокс контент */
+#boxContent
+   {
+     text-align: left;
+     margin-bottom: 0.5em;
+     margin-top: 0.2em;
+     margin-right: 0.5em; /* отступ от правого края браузера */
+     margin-left: 0;
+     padding-bottom: 0em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-left: 0em;
+     padding-right: 0em;
+   }
+
+/*- Заголовок бокса контент */
+#boxContent h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса контент */
+
+/*- Содержимое бокса контент */
+#boxContentContent 
+   {
+     padding-left: 0;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxContentContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса контент */
+
+#boxContent ul
+   {
+     list-style-type: none;
+     text-align: left;
+     padding-left: 0em;
+     margin: 0 0 0 0;
+   }
+
+#boxContent li 
+   {
+	  display: block;
+     font: 11px Tahoma, Verdana, Arial, sans-serif;
+     padding: 0.5em; 
+     border-top: 1px solid #dfdfdf; 
+     border-right: 0px solid #dfdfdf; 
+     border-bottom: 0px solid #dfdfdf; 
+     border-left: 0px solid #dfdfdf; 
+   }
+
+/*- /Бокс контент */
+
+/*- Бокс информация */
+#boxInformation
+   {
+     text-align: left;
+     margin-bottom: 0.5em;
+     margin-top: 0.2em;
+     margin-right: 0.5em; /* отступ от правого края браузера */
+     margin-left: 0;
+     padding-bottom: 0em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-left: 0em;
+     padding-right: 0em;
+   }
+
+/*- Заголовок бокса информация */
+#boxInformation h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса информация */
+
+/*- Содержимое бокса информация */
+#boxInformationContent 
+   {
+     padding-left: 0;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxInformationContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса информация */
+
+#boxInformation ul
+   {
+     list-style-type: none;
+     text-align: left;
+     padding-left: 0em;
+     margin: 0 0 0 0;
+   }
+
+#boxInformation li 
+   {
+	  display: block;
+     font: 11px Tahoma, Verdana, Arial, sans-serif;
+     padding: 0.5em; 
+     border-top: 1px solid #dfdfdf; 
+     border-right: 0px solid #dfdfdf; 
+     border-bottom: 0px solid #dfdfdf; 
+     border-left: 0px solid #dfdfdf; 
+   }
+
+/*- /Бокс информация */
+
+/*- Бокс быстрый заказ */
+#boxAddQuickie
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса быстрый заказ */
+#boxAddQuickie h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса быстрый заказ */
+
+/*- Содержимое бокса быстрый заказ */
+#boxAddQuickieContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxAddQuickieContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса быстрый заказ */
+
+/*- Форма быстрый заказ */
+.addquickieform input {
+	width: 80%;
+	font-size: 1em;
+	border: 1px solid;
+	border-color: #666 #ccc #ccc #666;
+	padding: 2px;
+   margin-top: 0.2em;
+   margin-bottom: 0.4em;
+}
+
+.addquickieform input:focus, .sffocus, .sffocus {
+	background-color: #ffc;
+}
+/*- /Форма быстрый заказ */
+
+/*- /Бокс быстрый заказ */
+
+/*- Бокс авторы */
+#boxAuthors
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса авторы */
+#boxAuthors h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса авторы */
+
+/*- Содержимое бокса авторы */
+#boxAuthorsContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxAuthorsContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса авторы */
+
+/*- /Бокс авторы */
+
+/*- Бокс статьи */
+#boxArticles
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса статьи */
+#boxArticles h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса статьи */
+
+/*- Содержимое бокса статьи */
+#boxArticlesContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxArticlesContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса статьи */
+
+/*- /Бокс статьи */
+
+/*- Бокс партнёрка */
+#boxAffiliate
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса партнёрка */
+#boxAffiliate h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса партнёрка */
+
+/*- Содержимое бокса партнёрка */
+#boxAffiliateContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxAffiliateContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса партнёрка */
+
+/*- /Бокс партнёрка */
+
+/*- Бокс новые статьи */
+#boxArticlesNew
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса новые статьи */
+#boxArticlesNew h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса новые статьи */
+
+/*- Содержимое бокса новые статьи */
+#boxArticlesNewContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxArticlesNewContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса новые статьи */
+
+/*- /Бокс новые статьи */
+
+/*- Бокс просмотренные товары */
+#boxLastViewed
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса просмотренные товары */
+#boxLastViewed h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса просмотренные товары */
+
+/*- Содержимое бокса просмотренные товары */
+#boxLastViewedContent 
+   {
+     text-align: center;
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxLastViewedContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса просмотренные товары */
+
+/*- /Бокс просмотренные товары */
+
+/*- Бокс отзывы */
+#boxReviews
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса отзывы */
+#boxReviews h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса отзывы */
+
+/*- Содержимое бокса отзывы */
+#boxReviewsContent 
+   {
+     text-align: center;
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxReviewsContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса отзывы */
+
+/*- /Бокс отзывы */
+
+/*- Бокс поиск */
+#boxSearch
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса поиск */
+#boxSearch h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+
+#boxSearch h5 a
+   {
+     color: #fff;
+     text-decoration: none;
+   }
+/*- /Заголовок бокса поиск */
+
+/*- Содержимое бокса поиск */
+#boxSearchContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxSearchContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса поиск */
+
+/*- Форма бокса поиск */
+.searchboxform input {
+	width: 80%;
+	font-size: 1em;
+	border: 1px solid;
+	border-color: #666 #ccc #ccc #666;
+	padding: 2px;
+   margin-top: 0.2em;
+   margin-bottom: 0.4em;
+}
+
+.searchboxform input:focus, .sffocus, .sffocus {
+	background-color: #ffc;
+}
+/*- /Форма бокса поиск */
+
+/*- /Бокс поиск */
+
+/*- Бокс скидки */
+#boxSpecials
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса скидки */
+#boxSpecials h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+
+#boxSpecials h5 a
+   {
+     color: #fff;
+     text-decoration: none;
+   }
+/*- /Заголовок бокса скидки */
+
+/*- Содержимое бокса скидки */
+#boxSpecialsContent 
+   {
+     text-align: center;
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxSpecialsContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса скидки */
+
+/*- /Бокс скидки */
+
+/*- Бокс рекомендуемые */
+#boxFeatured
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса рекомендуемые */
+#boxFeatured h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+  
+#boxFeatured h5 a
+   {
+     color: #fff;
+     text-decoration: none;
+   }
+/*- /Заголовок бокса рекомендуемые */
+
+/*- Содержимое бокса рекомендуемые */
+#boxFeaturedContent 
+   {
+     text-align: center;
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxFeaturedContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса рекомендуемые */
+
+/*- /Бокс рекомендуемые */
+
+/*- Бокс новинки */
+#boxWhatsNew
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса новинки */
+#boxWhatsNew h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+
+#boxWhatsNew h5 a
+   {
+     color: #fff;
+     text-decoration: none;
+   }
+/*- /Заголовок бокса новинки */
+
+/*- Содержимое бокса новинки */
+#boxWhatsNewContent 
+   {
+     text-align: center;
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxWhatsNewContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса новинки */
+
+/*- /Бокс новинки */
+
+/*- Бокс новости */
+#boxNews
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса новости */
+#boxNews h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+
+#boxNews h5 a
+   {
+     color: #fff;
+     text-decoration: none;
+   }
+/*- /Заголовок бокса новости */
+
+/*- Содержимое бокса новости */
+#boxNews .boxNewsContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxNews .boxNewsContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса новости */
+
+/*- /Бокс новости */
+
+/*- Бокс вопросы и ответы */
+#boxFaq
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса вопросы и ответы */
+#boxFaq h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+
+#boxFaq h5 a
+   {
+     color: #fff;
+     text-decoration: none;
+   }
+/*- /Заголовок бокса вопросы и ответы */
+
+/*- Содержимое бокса вопросы и ответы */
+#boxFaq .boxFaqContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxFaq .boxFaqContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса вопросы и ответы */
+
+/*- /Бокс вопросы и ответы */
+
+/*- Бокс корзина */
+
+/* Оформление */
+#boxCart 
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+#boxCart .top, #boxCart .bottom 
+   {
+     display: block; 
+     background: transparent; 
+     font-size: 1px;
+   }
+
+/* Шапка с углами */
+#boxCart .b1, #boxCart .b2, #boxCart .b3, #boxCart .b4, #boxCart .b5 
+   {
+     display: none;
+   }
+/* /Шапка с углами */
+
+/* Низ с углами */
+#boxCart .b1b, #boxCart .b2b, #boxCart .b3b, #boxCart .b4b, #boxCart .b5b 
+   {
+     display: none;
+   }
+/* /Низ с углами */
+
+#boxCart .b1, #boxCart .b1b
+   {
+     display: none;
+   }
+
+#boxCart .b2, #boxCart .b2b
+   {
+     display: none;
+   }
+
+#boxCart .b3, #boxCart .b3b 
+   {
+     display: none;
+   }
+
+#boxCart .b4, #boxCart .b4b 
+   {
+     display: none;
+   }
+
+#boxCart .b5, #boxCart .b5b 
+   {
+     display: none;
+   }
+
+#boxCart .boxheader 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+   }
+
+#boxCart .boxcontent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+   }
+
+#boxCart .boxcontent  span 
+   {
+     font-weight: bold;
+   }
+
+#boxCart .boxheader p 
+   {
+     padding-top: 0;
+     padding-bottom: 0.4em;
+     padding-left: 0.5em;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: 0;
+     margin-right: 0;
+   }
+
+#boxCart .boxcontent p 
+   {
+     padding-top: 0.1em;
+     padding-bottom: 0.1em;
+     padding-left: 0.5em;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: 0;
+     margin-right: 0;
+   }
+/* /Оформление */
+
+/* Ссылки в заголовке бокса */
+#boxCart .boxheader a 
+   {
+     color: #fff;
+     text-decoration: none;
+   }
+
+#boxCart .boxheader a:hover 
+   {
+     color: #fff;
+     text-decoration: none;
+   }
+/* /Ссылки в заголовке бокса */
+
+p.CartContentRight
+   {
+     text-align: right;
+     padding-right: 0.2em;
+   }
+
+/*- /Бокс корзина */
+
+/*- Бокс вход/админ */
+
+/* Оформление */
+#boxLogin 
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+#boxLogin .top, #boxLogin .bottom 
+   {
+     display: block; 
+     background: transparent; 
+     font-size: 1px;
+   }
+
+/* Шапка с углами */
+#boxLogin .b1, #boxLogin .b2, #boxLogin .b3, #boxLogin .b4, #boxLogin .b5 
+   {
+     display: none
+   }
+/* /Шапка с углами */
+
+/* Низ с углами */
+#boxLogin .b1b, #boxLogin .b2b, #boxLogin .b3b, #boxLogin .b4b, #boxLogin .b5b 
+   {
+     display: none
+   }
+/* /Низ с углами */
+
+#boxLogin .b1, #boxLogin .b1b
+   {
+     display: none
+   }
+
+#boxLogin .b2, #boxLogin .b2b
+   {
+     display: none
+   }
+
+#boxLogin .b3, #boxLogin .b3b 
+   {
+     display: none
+   }
+
+#boxLogin .b4, #boxLogin .b4b 
+   {
+     display: none
+   }
+
+#boxLogin .b5, #boxLogin .b5b 
+   {
+     display: none
+   }
+
+#boxLogin .boxheader 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+   }
+
+#boxLogin .boxcontent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+   }
+
+#boxLogin .boxcontent  span 
+   {
+     font-weight: bold;
+   }
+
+#boxLogin .boxheader p 
+   {
+     padding-top: 0;
+     padding-bottom: 0.4em;
+     padding-left: 0.5em;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: 0;
+     margin-right: 0;
+   }
+
+#boxLogin .boxcontent p 
+   {
+     padding-top: 0.1em;
+     padding-bottom: 0.1em;
+     padding-left: 0.2em;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: 0;
+     margin-right: 0;
+   }
+/* /Оформление */
+
+/*- Форма входа */
+.loginform input {
+	width: 70%;
+	font-size: 1em;
+	border: 1px solid;
+	border-color: #666 #ccc #ccc #666;
+	padding: 2px;
+   margin-top: 0.2em;
+   margin-bottom: 0.4em;
+}
+
+.loginform input:focus, .sffocus, .sffocus {
+	background-color: #ffc;
+}
+/*- /Форма входа */
+
+p.LoginContentCenter
+   {
+     text-align: center;
+   }
+
+p.LoginContentLeft
+   {
+     text-align: left;
+   }
+
+/*- /Бокс вход/админ */
+
+/*- Бокс рассылка */
+#boxNewsletter
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса рассылка */
+#boxNewsletter h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса рассылка */
+
+/*- Содержимое бокса рассылка */
+#boxNewsletterContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxNewsletterContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса рассылка */
+
+/*- Форма рассылка */
+.newsletterform input {
+	width: 70%;
+	font-size: 1em;
+	border: 1px solid;
+	border-color: #666 #ccc #ccc #666;
+	padding: 2px;
+   margin-top: 0.2em;
+   margin-bottom: 0.4em;
+}
+
+.newsletterform input:focus, .sffocus, .sffocus {
+	background-color: #ffc;
+}
+/*- /Форма рассылка */
+
+/*- /Бокс рассылка */
+
+/*- Бокс лучшие товары */
+#boxBestsellers
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса лучшие товары */
+#boxBestsellers h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса лучшие товары */
+
+/*- Содержимое бокса лучшие товары */
+#boxBestsellersContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxBestsellersContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /Содержимое бокса лучшие товары */
+
+#boxBestsellersContent p.BestsellersContentRight
+   {
+     text-align: right;
+     padding-right: 0.2em;
+     padding-bottom: 0.3em;
+   }
+
+#boxBestsellersContent  span 
+   {
+     font-weight: bold;
+   }
+   
+/*- /Бокс лучшие товары */
+
+/*- Бокс информация о группе */
+#boxGroupInfo
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса информация о группе */
+#boxGroupInfo h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса информация о группе */
+
+/*- Содержимое бокса информация о группе */
+#boxGroupInfoContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxGroupInfoContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+#boxGroupInfoContent  span 
+   {
+     font-weight: bold;
+   }
+
+/*- /Содержимое бокса информация о группе */
+
+/*- /Бокс информация о группе */
+
+/*- Бокс валюты */
+#boxCurrencies
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса валюты */
+#boxCurrencies h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса валюты */
+
+/*- Содержимое бокса валюты */
+#boxCurrenciesContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxCurrenciesContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса валюты */
+
+/*- Форма выбора валюты */
+#boxCurrenciesContent select {
+	width: 70%;
+	font-size: 1em;
+	border: 1px solid;
+	border-color: #666 #ccc #ccc #666;
+	padding: 2px;
+   margin-top: 0.2em;
+   margin-bottom: 0.4em;
+}
+/*- /Форма выбора валюты */
+
+/*- /Бокс валюты */
+
+/*- Бокс языки */
+#boxLanguages
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса языки */
+#boxLanguages h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса языки */
+
+/*- Содержимое бокса языки */
+#boxLanguagesContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxLanguagesContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса языки */
+
+/*- /Бокс языки */
+
+/*- Бокс производители */
+#boxManufacturers
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса производители */
+#boxManufacturers h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса производители */
+
+/*- Содержимое бокса производители */
+#boxManufacturersContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxManufacturersContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса производители */
+
+/*- Форма выбора производителя */
+#boxManufacturersContent select {
+	width: 70%;
+	font-size: 1em;
+	border: 1px solid;
+	border-color: #666 #ccc #ccc #666;
+	padding: 2px;
+   margin-top: 0.2em;
+   margin-bottom: 0.4em;
+}
+/*- /Форма выбора производителя */
+
+/*- /Бокс производители */
+
+/*- Бокс информация о производителе */
+#boxManufacturersInfo
+   {
+     text-align: left;
+     width: 97%;
+     margin-bottom: 0.5em;
+     margin-top: 0.4em;
+     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+/*- Заголовок бокса информация о производителе */
+#boxManufacturersInfo h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #fff;
+     background: url(img/msk/hd_f.jpg);
+     margin: 0 0 0 .4em;
+     padding: .5em;
+     border-top: 1px solid #dfdfdf;
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf;
+     border-right: 1px solid #dfdfdf;
+  }
+/*- /Заголовок бокса информация о производителе */
+
+/*- Содержимое бокса информация о производителе */
+#boxManufacturersInfoContent 
+   {
+     padding-left: 1em;
+     padding-bottom: 0.2em;
+     border-top: 1px solid #dfdfdf; 
+     border-right: 1px solid #dfdfdf; 
+     border-bottom: 3px solid #dfdfdf;
+     border-left: 1px solid #dfdfdf; 
+     margin-left: 0.5em;
+     background: #f8f8f8;
+  }
+
+#boxManufacturersInfoContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /Содержимое бокса информация о производителе */
+
+/*- /Бокс информация о производителе */
+
+/*- /Боксы */
+
+/*- Время парсинга */
+div#parseTime
+   {
+     clear: left;
+     background: #e9eff5;
+     width: 100%;
+     text-align: center;
+     color: #000;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+   }
+/*- /Время парсинга */
+
+/*- Информация о магазине */
+div#copyright
+   {
+     clear: left;
+     background: #e9eff5;
+     width: 100%;
+     text-align: center;
+     color: #000;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+   }
+
+div.copyright
+   {
+     clear: left;
+     background: #e9eff5;
+     width: 100%;
+     text-align: center;
+     color: #000;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+   }
+/*- /Информация о магазине */
+
+/*- Формы */
+
+form 
+   {
+	  width: 100%;
+	  margin: 0;
+   }
+
+.form input, textarea 
+   {
+	  font-size: 1em;
+	  border: 1px solid;
+	  border-color: #666 #ccc #ccc #666;
+	  padding: 2px;
+   }
+
+/*- Подсветка ошибок формы */
+#errormsg
+   {
+     border: 2px solid #c00;
+     padding: 5px;
+     width: 96%;
+   }    
+
+.error
+   {
+	  background: #fcc;
+   }
+/*- /Подсветка ошибок формы */
+   
+.form textarea:focus, input:focus, .sffocus, .sffocus 
+   {
+	  background-color: #ffc;
+   }
+
+span.Requirement 
+   {
+     color: red;
+   }
+
+/*- /Формы */
+
+/*- Цены */
+
+span.markProductOutOfStock 
+   {
+     font-family: Tahoma, Verdana, Arial, sans-serif;
+     color: #c76170;
+     font-weight: bold;
+   }
+
+span.productSpecialPrice 
+   {
+     font-family: Verdana, Arial, sans-serif;
+     color: #ff0000;
+   }
+
+span.productOldPrice 
+   {
+	  font-family: Verdana, Arial, sans-serif;
+	  color: #ff0000;
+	  text-decoration: line-through;
+   }
+
+span.errorText 
+   {
+     font-family: Verdana, Arial, sans-serif;
+     color: #ff0000;
+   }
+
+/*- /Цены */
+
+/* Ошибка на странице свяжитесь с нами */
+
+div.contacterror 
+   {
+     border: 1px solid; 
+     border-color: #ff0000; 
+     background-color: #FFCCCC; 
+     text-align: center; 
+     margin-bottom: 0.5em; 
+     margin-top: 0.5em;
+   }
+
+/* /Ошибка на странице свяжитесь с нами */
+
+/* Вывод товаров */
+
+/* Количества колонок с товаром на странице новинки */
+dl.itemNewProducts 
+   {
+     display: block;
+     width: 100%; /* количество колонок, 50% - товар выводится двумя колонками, т.е. два товара в одной строке, 100% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     height: auto; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     background: transparent;
+   }
+/* /Количества колонок с товаром на странице новинки */
+
+/* Количества колонок с товаром на странице рекомендуемые товары */
+dl.itemFeaturedProducts 
+   {
+     display: block;
+     width: 48%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     height: auto; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     border-bottom: 1px #dfdfdf solid;
+   }
+/* /Количества колонок с товаром на странице рекомендуемые товары */
+
+/* Количества колонок с товаром в блоке новинки на главной странице */
+dl.itemNewProductsDefault 
+   {
+     display: block;
+     width: 48%; /* количество колонок, 48% (не 50, иначе в IE всё равно в одну колонку будут) - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     height: auto; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     background: transparent;
+   }
+/* /Количества колонок с товаром в блоке новинки на главной странице */
+
+/* Количества колонок с новостями на главной странице */
+dl.itemLatestNewsDefault 
+   {
+     display: block;
+     width: 48%; /* количество колонок, 48% (не 50, иначе в IE всё равно в одну колонку будут) - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     margin: 0.5em 0 0.5em 0;
+     padding: 0 0 0 0;
+   }
+/* /Количества колонок с новостями на главной странице */
+
+/* Количества колонок с новостями на странице новостей */
+dl.itemLatestNews 
+   {
+     display: block;
+     width: 98%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     margin: 0.5em 0 0.5em 0;
+     padding: 0 0 0 0;
+   }
+/* /Количества колонок с новостями на странице новостей */
+
+/* Количества колонок с товаром на странице скидки */
+dl.itemSpecials 
+   {
+     display: block;
+     width: 48%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     height: auto; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     border-bottom: 1px #dfdfdf solid;
+   }
+/* /Количества колонок с товаром на странице скидки */
+
+/* Количества колонок с товаром на странице мои данные */
+dl.itemLastViewed 
+   {
+     display: block;
+     width: 98%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     height: auto; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     border-bottom: 1px #dfdfdf solid;
+   }
+
+/* /Количества колонок с товаром на странице мои данные */
+
+/* Информация о заказе, адрес клиента и адрес доставки */
+dl.ordersAddress 
+   {
+     display: block;
+     width: 49%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     border-bottom: 1px #dfdfdf solid;
+   }
+
+dt.ordersAddress 
+   {
+     display: block;
+     float: left;
+     background: transparent;
+     border-right: 0px #f1f1f6 solid;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     text-align: center;
+   }
+
+dd.ordersAddress
+   {
+     display: block;
+     margin: 0 0 0 1em;
+     padding: 0 0 0 0;
+     line-height: normal;
+     background: transparent;
+   }
+
+/* /Информация о заказе, адрес клиента и адрес доставки */
+
+/* Адресная книга */
+dl.AddressBook 
+   {
+     display: block;
+     width: 49%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+   }
+
+dt.AddressBook 
+   {
+     display: block;
+     float: left;
+     width: 90px;
+     background: transparent;
+     border-right: 0px #f1f1f6 solid;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     text-align: center;
+   }
+
+dd.AddressBook
+   {
+     display: block;
+     margin: 0 0 0 90px;
+     padding: 0 0 0 0;
+     line-height: normal;
+     background: transparent;
+   }
+
+dl.AddressBookList 
+   {
+     display: block;
+     width: 49%;
+     float: left;
+     height: auto;
+     margin: 0 0 0 0;
+     padding: 0 0 1em 0;
+   }
+
+dt.AddressBookList 
+   {
+     display: block;
+     float: left;
+     background: transparent;
+     border-right: 0px #f1f1f6 solid;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     text-align: center;
+   }
+
+dd.AddressBookList
+   {
+     display: block;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     line-height: normal;
+     background: transparent;
+   }
+
+/* /Адресная книга */
+
+/* Вход */
+dl.Login 
+   {
+     display: block;
+     width: 49%;
+     float: left;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+   }
+
+dt.Login
+   {
+     float: left;
+     display: block;
+     background: transparent;
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     text-align: center;
+   }
+
+dd.Login
+   {
+     display: block;
+     margin: 0 0 0 1em;
+     padding: 0 0 0 0;
+     line-height: normal;
+     background: transparent;
+   }
+
+/* /Вход */
+
+dt.itemImage 
+   {
+     float: left;
+     display: block;
+     background: transparent;
+     border-right: 0px #f1f1f6 solid;
+     margin: 0 0 0 0;
+     padding: 5px 5px 0 5px;
+     text-align: center;
+   }
+
+dt.itemNews 
+   {
+     display: none;
+     float: left;
+     background: transparent;
+     border-right: 0px #f1f1f6 solid;
+     margin: 0 0 0 0;
+     padding: 5px 5px 0 5px;
+     text-align: left;
+   }
+
+dd.itemDescription
+   {
+     display: block;
+     margin: 0 0 0 0;
+     padding: 0 0;
+     line-height: normal;
+     background: transparent;
+   }
+
+dd.itemDescriptionPrice
+   {
+     display: block;
+     margin: 1em 0 0 0;
+     padding: 0 0;
+     line-height: normal;
+     background: transparent;
+   }
+
+dd.itemNews
+   {
+     display: block;
+     margin-left: 1em;
+     padding: 0 0;
+     line-height: normal;
+     background: transparent;
+   }
+
+div.clear
+   {
+     clear: both;
+   }
+
+div.navigation
+   {
+     display: block;
+     width: 100%;
+     padding-top: 1em;
+   }
+
+span.right
+   {
+     float: right;
+   }
+
+/* /Вывод товаров */
+
+/* Вывод категорий */
+
+dl.itemCategoriesListing 
+   {
+     width: 33%; /* количество колонок, 50% - товар выводится двумя колонками, т.е. два товара в одной строке, 100% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     float: left;
+     height: auto; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     background: transparent;
+   }
+
+dt.itemCategoriesListing 
+   {
+     float: left;
+     height: auto;
+     background: transparent;
+     border-right: 0px #f1f1f6 solid;
+     margin: 0 0 0 0;
+     padding: 5px 5px 0 5px;
+     text-align: center;
+   }
+
+dd.itemCategoriesListing 
+   {
+     margin: 0 1em 0 1em;
+     padding: 0 0;
+     line-height: normal;
+     background: transparent;
+     text-align: center;
+   }
+
+/* /Вывод категорий */
+
+/* Страница карточки товара */
+
+p.center
+   {
+     text-align: center;
+   }
+
+div.ProductInfoLeft
+   {
+     margin-right: 1em;
+   }
+
+div.ProductInfoRight
+   {
+     margin-left: 1em;
+     text-align: left;
+   }
+
+/* /Страница карточки товара */
+
+/* Ссылки на странице мои данные */
+
+ul.accountLinks 
+   {
+     list-style-type: none;
+     text-align: left;
+     padding-left: 1em;
+     margin: 0 0 0 0;
+   }
+
+li.accountLinks 
+   {
+	  display: block;
+     font: 11px Tahoma, Verdana, Arial, sans-serif;
+     background: url(img/icon_arrow1.jpg) no-repeat left center;
+     padding: 0 0 0 14px; 
+   }
+
+/* /Ссылки на странице мои данные */
+
+span.bold 
+   {
+     font-weight: bold;
+   }
+
+/* Ajax quick find */
+
+div.ajaxQuickFind 
+   {
+     text-align: left;
+   }
+
+ul.ajaxQuickFind 
+   {
+     list-style-type: none;
+     list-style-image: none;
+     padding-left: 0px;
+   }
+
+li.ajaxQuickFind 
+   {
+     font-size: 80%;
+     padding-left: 0px;
+   } 
+
+/* /Ajax quick find */
+
+/* Ajax add quickie suggest */
+
+div.ajaxAddQuickie 
+   {
+     text-align: left;
+   }
+
+div.addQuick 
+   {
+     text-align: left;
+     color: #67748B;
+     text-decoration: underline;
+     cursor: pointer;
+   }
+   
+ul.ajaxAddQuickie 
+   {
+     list-style-type: none;
+     list-style-image: none;
+     padding-left: 0px;
+   }
+
+li.ajaxAddQuickie 
+   {
+     font-size: 80%;
+     padding-left: 0px;
+   } 
+
+/* /Ajax add quickie suggest */
+
+.errorBox 
+   {
+	  background-color: #ffb3b5;
+   }
+
+.messageStackError, .messageStackWarning 
+   { 
+     background-color: #ffb3b5; 
+   }
+
+.messageStackSuccess 
+   { 
+     background-color: #99ff00; 
+   }
+
+.headerError 
+   {
+	  background-color: #ffb3b5;
+     border: 1px solid red;
+   }
+
+.messageStack
+   {
+     background-color: #ffb3b5; 
+     padding: 0.5em 0.5em 0.5em 0.5em; 
+   }

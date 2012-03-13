@@ -2,29 +2,44 @@
 
 {$FORM_ACTION}
 
-<div id="content">
+<div id="text_place">
 
 {if $error!=''}
-<div class="contacterror">
-{$error}
-</div>
+    <div class="contacterror">
+        {$error}
+    </div>
 {/if}
 <div class="page">
 <div class="pagecontent">
-{#heading_title#}
-<br />
-<br />
-<!-- форма -->
-<fieldset class="form">
-<legend>{#title_question#} {$PRODUCTS_NAME}</legend>
-<p>{#text_sec_code#} {$CAPTCHA_IMG}</p>
-<p>{#text_inp_code#} {$CAPTCHA_INPUT}</p>
-<p>{#text_firstname#} {$INPUT_FIRSTNAME}</p>
-<p>{#text_lastname#} {$INPUT_LASTNAME}</p>
-<p>{#text_email#} {$INPUT_EMAIL}</p>
-<p>{#text_message#} {$INPUT_TEXT}</p>
-</fieldset>
-<!-- /форма -->
+<h2>{#heading_title#}</h2>
+
+<div><b>{#title_question#} {$PRODUCTS_NAME}</b></div>
+<table>
+    <tr>
+        <td>{#text_sec_code#}</td>
+        <td>{$CAPTCHA_IMG}</td>
+    </tr>
+    <tr>
+        <td>{#text_inp_code#}</td>
+        <td>{$CAPTCHA_INPUT}</td>
+    </tr>
+    <tr>
+        <td>{#text_firstname#}</td>
+        <td>{$INPUT_FIRSTNAME}</td>
+    </tr>
+    <tr>
+        <td>{#text_lastname#}</td>
+        <td>{$INPUT_LASTNAME}</td>
+    </tr>
+    <tr>
+        <td>{#text_email#}</td>
+        <td>{$INPUT_EMAIL}</td>
+    </tr>
+    <tr>
+        <td>{#text_message#}</td>
+        <td>{$INPUT_TEXT}</td>
+    </tr>
+</table>
 </div>
 </div>
 

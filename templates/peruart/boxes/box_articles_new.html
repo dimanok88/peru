@@ -3,7 +3,7 @@
 <div class="title">{#heading_articles_new#}</div>
 <div class="block">
     {foreach name=aussen item=articles from=$articles_content}
-        <a href="{$articles.ARTICLES_URL}">{$articles.ARTICLES_NAME}</a><br />
+        <b><a href="{$articles.ARTICLES_URL}">{$articles.ARTICLES_NAME}</a></b><br />
         {$articles.ARTICLES_CONTENT|vam_truncate:$smarty.const.MAX_DISPLAY_ARTICLES_CONTENT:" ..."}<br />
     {/foreach}
 </div>

@@ -6,162 +6,137 @@
 {$downloads_content}
 <!-- /Файлы -->
 {/if}
+<div class="title">{#heading_history_info#}</div>
 
-<h1>{#heading_history_info#}</h1>
-<!-- Информация о заказе -->
-<div class="page">
-<div class="pagecontent">
+<div class="text_place">
 
-<p>
-<span class="bold">{#text_oid#}</span> {$ORDER_NUMBER} ({$ORDER_STATUS})
-</p>
+    <h2><span class="bold">{#text_oid#}</span> {$ORDER_NUMBER} ({$ORDER_STATUS})</h2>
 
-<p>
-<span class="bold">{#text_date#}</span> {$ORDER_DATE}
-</p>
+    <h2>
+    <span class="bold">{#text_date#}</span> {$ORDER_DATE}
+    </h2>
 
-<!-- Адрес доставки -->
-<dl class="ordersAddress">
-<dt class="ordersAddress">
-</dt>
+    <!-- Адрес доставки -->
+    <dl class="ordersAddress">
+    <dt class="ordersAddress">
+    </dt>
 
-<dd class="ordersAddress">
-<span class="bold">{#text_shipping_address#}:</span>
-</dd>
+    <dd class="ordersAddress">
+    <b>{#text_shipping_address#}:</b>
+    </dd>
 
-<dd class="ordersAddress">
-{$DELIVERY_LABEL}
-</dd>
+    <dd class="ordersAddress">
+    {$DELIVERY_LABEL}
+    </dd>
 
-</dl>
-<!-- /Адрес доставки -->
+    </dl>
+    <!-- /Адрес доставки -->
 
-{if $BILLING_LABEL}
-<!-- Адрес клиента -->
-<dl class="ordersAddress">
-<dt class="ordersAddress">
-</dt>
+    {if $BILLING_LABEL}
+    <!-- Адрес клиента -->
+    <dl class="ordersAddress">
+    <dt class="ordersAddress">
+    </dt>
 
-<dd class="ordersAddress">
-<span class="bold">{#text_payment_address#}:</span>
-</dd>
+    <dd class="ordersAddress">
+    <b>{#text_payment_address#}:</b>
+    </dd>
 
-<dd class="ordersAddress">
-{$BILLING_LABEL}
-</dd>
+    <dd class="ordersAddress">
+    {$BILLING_LABEL}
+    </dd>
 
-</dl>
-<!-- /Адрес клиента -->
-{/if}
-<div class="clear"></div>
+    </dl>
+    <!-- /Адрес клиента -->
+    {/if}
+    <div class="clear"></div>
 
-<p>
-<span class="bold">{#text_shipping_method#}</span> {$SHIPPING_METHOD}
-</p>
+    <p>
+    <b>{#text_shipping_method#}</b> {$SHIPPING_METHOD}
+    </p>
 
-{if $PAYMENT_METHOD}
-<p>
-<span class="bold">{#text_payment_method#}</span> {$PAYMENT_METHOD}
-</p>
-{/if}
+    {if $PAYMENT_METHOD}
+    <p>
+    <b>{#text_payment_method#}</b> {$PAYMENT_METHOD}
+    </p>
+    {/if}
 
-{if $ORDER_COMMENTS!=''}
-<p>
-<span class="bold">{#text_comments#}</span>
-</p>
-<p>
-<!--{$ORDER_COMMENTS}-->
-</p>
-{/if}
+    {if $ORDER_COMMENTS!=''}
+    <p>
+    <b>{#text_comments#}</b>
+    </p>
+    <p>
+    <!--{$ORDER_COMMENTS}-->
+    </p>
+    {/if}
 
-{if $PAYMENT_INFORMATION!=''}
-<p>
-<span class="bold">{#text_payment_info#}</span>
-</p>
-<p>
-{$PAYMENT_INFORMATION}
-</p>
-{/if}
+    {if $PAYMENT_INFORMATION!=''}
+    <p>
+    <b>{#text_payment_info#}</b>
+    </p>
+    <p>
+    {$PAYMENT_INFORMATION}
+    </p>
+    {/if}
 
-</div>
-</div>
-<!-- /Информация о заказе -->
+    <h2>{#title_history#}</h2>
 
-<!-- История заказа -->
-<div class="page">
-<div class="pagecontent">
+    {$HISTORY_BLOCK}
 
-<p>
-<span class="bold">{#title_history#}</span>
-</p>
 
-{$HISTORY_BLOCK}
+    <h2><b>{#heading_products#}</b></h2>
 
-</div>
-</div>
-<!-- /История заказа -->
+        <table width="100%" border="0" cellpadding="3" cellspacing="0">
+            <tr>
+              <td colspan="2"><span class="bold">{#head_units#}</span></td>
+              <td><span class="bold">{#head_products#}</span></td>
+              <td><span class="bold">{#head_artnr#}</span></td>
+              <td><span class="bold">{#head_single_price#}</span></td>
+              <td width="150"><span class="bold">{#head_price#}</span></td>
+            </tr>
+            {foreach name=aussen item=order_values from=$order_data}
+            <tr>
+              <td width="20"><span class="bold">{$order_values.PRODUCTS_QTY}</span></td>
+              <td width="20"><span class="bold">x</span></td>
+              <td><span class="bold">{$order_values.PRODUCTS_NAME}</span><em>{$order_values.PRODUCTS_ATTRIBUTES}</em>{if $order_values.PRODUCTS_SHIPPING_TIME neq ''}<br />
+                {#text_shippingtime#} {$order_values.PRODUCTS_SHIPPING_TIME}<br />{/if}</td>
+              <td>{$order_values.PRODUCTS_MODEL}<em>{$order_values.PRODUCTS_ATTRIBUTES_MODEL}</em></td>
+              <td>{$order_values.PRODUCTS_SINGLE_PRICE}</td>
+              <td width="150"><span class="bold">{$order_values.PRODUCTS_PRICE}</span></td>
+            </tr>
+            {/foreach} </table>
+        <table width="100%" border="0" cellpadding="3" cellspacing="0">
+      {foreach name=aussen item=order_total_values from=$order_total}
+      <tr>
+        <td nowrap="nowrap" width="100%"><div align="right">{$order_total_values.TITLE}
+                  {$order_total_values.TEXT}</div></td>
+      </tr>
+      {/foreach}
+    </table>
 
-<!-- Заказанные товары -->
-<div class="page">
-<div class="pagecontent">
 
-<p>
-<span class="bold">{#heading_products#}</span>
-</p>
+    <div class="clear"></div>
+    <div class="navigation">
+    <span class="right">{$BUTTON_PRINT}</span>
+    {$BUTTON_BACK}
+    </div>
+    <div class="clear"></div>
 
-	<table width="100%" border="0" cellpadding="3" cellspacing="0">
-        <tr> 
-          <td colspan="2"><span class="bold">{#head_units#}</span></td>
-          <td><span class="bold">{#head_products#}</span></td>
-          <td><span class="bold">{#head_artnr#}</span></td>
-          <td><span class="bold">{#head_single_price#}</span></td>
-          <td width="150"><span class="bold">{#head_price#}</span></td>
-        </tr>
-        {foreach name=aussen item=order_values from=$order_data} 
-        <tr> 
-          <td width="20"><span class="bold">{$order_values.PRODUCTS_QTY}</span></td>
-          <td width="20"><span class="bold">x</span></td>
-          <td><span class="bold">{$order_values.PRODUCTS_NAME}</span><em>{$order_values.PRODUCTS_ATTRIBUTES}</em>{if $order_values.PRODUCTS_SHIPPING_TIME neq ''}<br />
-            {#text_shippingtime#} {$order_values.PRODUCTS_SHIPPING_TIME}<br />{/if}</td>
-          <td>{$order_values.PRODUCTS_MODEL}<em>{$order_values.PRODUCTS_ATTRIBUTES_MODEL}</em></td>
-          <td>{$order_values.PRODUCTS_SINGLE_PRICE}</td>
-          <td width="150"><span class="bold">{$order_values.PRODUCTS_PRICE}</span></td>
-        </tr>
-        {/foreach} </table>
-	<table width="100%" border="0" cellpadding="3" cellspacing="0">
-  {foreach name=aussen item=order_total_values from=$order_total}
-  <tr> 
-    <td nowrap="nowrap" width="100%"><div align="right">{$order_total_values.TITLE} 
-              {$order_total_values.TEXT}</div></td>
-  </tr>
-  {/foreach} 
-</table>
-
-</div>
-</div>
-<!-- /Заказанные товары -->
-
-<div class="clear"></div>
-<div class="navigation">
-<span class="right">{$BUTTON_PRINT}</span>
-{$BUTTON_BACK}
-</div>
-<div class="clear"></div>
-
-<div class="pagecontentfooter">
-<p>
-<span class="bold">{#title_print#}</span>
-</p>
-<p>
-{#text_print#}
-</p>
-<p>
-{$BUTTON_SCHET_PRINT}
-</p>
-<p>
-{$BUTTON_PACKINGSLIP_PRINT}
-</p>
-<p>
-{$BUTTON_KVITANCIA_PRINT}
-</p>
+    <div class="pagecontentfooter">
+    <h2>
+        <span class="bold">{#title_print#}</span>
+    </h2>
+    <p>
+    {#text_print#}
+    </p>
+    <p>
+    {$BUTTON_SCHET_PRINT}
+    </p>
+    <p>
+    {$BUTTON_PACKINGSLIP_PRINT}
+    </p>
+    <p>
+    {$BUTTON_KVITANCIA_PRINT}
+    </p>
+    </div>
 </div>

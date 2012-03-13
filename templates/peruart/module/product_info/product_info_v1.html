@@ -87,17 +87,13 @@
     {$MODULE_product_options}
     {/if}
 
+    <p class="CartContentRight">
+    {$ADD_QTY}  {$ADD_CART_BUTTON}
+    </p>
+
     </div>
 
     <div class="clear"></div>
-
-    <p class="CartContentRight">
-    {$ADD_QTY}
-    </p>
-
-    <p class="CartContentRight">
-    {$ADD_CART_BUTTON}
-    </p>
 
     {if $PRODUCTS_DESCRIPTION !=''}
     <p>
@@ -163,18 +159,6 @@
 
     <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
     <div class="yashare-auto-init" data-yashareType="button" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,friendfeed,lj"></div>
-
-    {if $PRODUCTS_DATE_AVIABLE != ''}
-    <p align="center">
-    {$PRODUCTS_DATE_AVIABLE}
-    </p>
-    {/if}
-
-    {if $PRODUCTS_ADDED != ''}
-    <p align="center">
-    {$PRODUCTS_ADDED}
-    </p>
-    {/if}
 
     </div>
     </div>

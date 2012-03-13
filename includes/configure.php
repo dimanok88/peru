@@ -18,12 +18,12 @@
 // Define the webserver and path parameters
 // * DIR_FS_* = Filesystem directories (local/physical)
 // * DIR_WS_* = Webserver directories (virtual/URL)
-  define('HTTP_SERVER', 'http://www.peru.dev'); // eg, http://localhost - should not be empty for productive servers
-  define('HTTPS_SERVER', 'http://www.peru.dev'); // eg, https://localhost - should not be empty for productive servers
+  define('HTTP_SERVER', 'http://peru'); // eg, http://localhost - should not be empty for productive servers
+  define('HTTPS_SERVER', 'http://peru'); // eg, https://localhost - should not be empty for productive servers
   define('ENABLE_SSL', false); // secure webserver for checkout procedure?
   define('DIR_WS_CATALOG', '/'); // absolute path required
-  define('DIR_FS_DOCUMENT_ROOT', '/home/nike/web/peru/www/');
-  define('DIR_FS_CATALOG', '/home/nike/web/peru/www/');
+  define('DIR_FS_DOCUMENT_ROOT', '/home/nike/webprojects/peru/www/');
+  define('DIR_FS_CATALOG', '/home/nike/webprojects/peru/www/');
   define('DIR_WS_IMAGES', 'images/');
   define('DIR_WS_ORIGINAL_IMAGES', DIR_WS_IMAGES .'product_images/original_images/');
   define('DIR_WS_THUMBNAIL_IMAGES', DIR_WS_IMAGES .'product_images/thumbnail_images/');
